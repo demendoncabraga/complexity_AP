@@ -1,0 +1,3626 @@
+{
+  "source": "paper/main.tex",
+  "source_sha256": "73c091bde0232ea165bd2cf10890b559ea40022f5f464cb8152441536e67d48c",
+  "inventory_complete": false,
+  "paper_roots": [
+    "PaperFormalization.illFounded_isometricOneComplementablyEmbeds",
+    "PaperFormalization.wellFounded_treeSpace_has_property",
+    "PaperFormalization.exists_borelReduction",
+    "PaperFormalization.analytic_family_contains_complemented_copy",
+    "PaperFormalization.analyticSet_complementablyEmbeds",
+    "PaperFormalization.completeAnalytic_complementablyEmbeds",
+    "PaperFormalization.analyticSet_not_hasApproximationProperty",
+    "PaperFormalization.effros_standardBorel_and_compacts",
+    "PaperFormalization.exists_banachCode_linearIsometryEquiv",
+    "PaperFormalization.approximationProperty_isL1StableComplemented",
+    "PaperFormalization.schurProperty_isL1StableComplemented",
+    "PaperFormalization.radonNikodymProperty_isL1Stable",
+    "PaperFormalization.borelAnalytic_isomorphism",
+    "PaperFormalization.borelAnalytic_isometry",
+    "PaperFormalization.borelAnalytic_isComplementedSubspace",
+    "PaperFormalization.borel_parametrized_dualBall",
+    "PaperFormalization.continuous_codedDualPairing_norm",
+    "PaperFormalization.dist_codedDualBallHomeomorph",
+    "PaperFormalization.isHomeomorph_weakStarL1Coordinates",
+    "PaperFormalization.DualCube.range_toLInfinity",
+    "PaperFormalization.NatTree.order_lt_omega_one",
+    "PaperFormalization.NatTree.prune_empty_iff_order_le",
+    "PaperFormalization.NatTree.order_successor_lt",
+    "PaperFormalization.branchOperator",
+    "PaperFormalization.branchProjection_properties",
+    "PaperFormalization.completeAnalytic_complementedClass",
+    "PaperFormalization.completeAnalytic_isometricComplementedClass",
+    "PaperFormalization.NatTree.analyticSet_compl_wellFounded",
+    "PaperFormalization.NatTree.compl_analyticImage_reduces_wellFounded",
+    "PaperFormalization.HasSchurProperty.iff_weaklyConvergent",
+    "PaperFormalization.comap_treeSpace",
+    "PaperFormalization.map_splitRootL1_branchKernelSpan",
+    "PaperFormalization.map_splitRootL1_rootAugmentedKernel",
+    "PaperFormalization.map_splitRootL1_rootCoordinateLine",
+    "PaperFormalization.map_successorL1_branchKernel"
+  ],
+  "items": [
+    {
+      "id": "approximation_property",
+      "source": "Introduction, line 140",
+      "description": "Approximation by finite-rank operators uniformly on compact sets",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasApproximationProperty",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "complemented_embedding",
+      "source": "Introduction, lines 136–138",
+      "description": "Isomorphic complemented embedding via bounded maps with a left inverse",
+      "status": "verified",
+      "declaration": "PaperFormalization.ComplementablyEmbeds",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "isometric_contractively_complemented",
+      "source": "Theorem.Map.Phi.Item2",
+      "description": "Isometric embedding with a contractive retraction",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsometricOneComplementablyEmbeds",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "tree",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Prefix-closed trees on natural numbers",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "branches",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Infinite branches through a tree",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.branches",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "wf",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Trees without branches",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.IsWellFounded",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "iff",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Trees with a branch",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.IsIllFounded",
+      "module": "PaperFormalization.Basic"
+    },
+    {
+      "id": "standard_borel",
+      "source": "Introduction, line 114",
+      "description": "Standard Borel spaces and a compatible Polish topology",
+      "status": "verified",
+      "declaration": "PaperFormalization.standardBorelSpace_iff_polish",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "complexity_classes",
+      "source": "Introduction, lines 114–120",
+      "description": "Analytic completeness under Borel reductions, with the coanalytic version defined by complements",
+      "status": "verified",
+      "declaration": "PaperFormalization.CompleteAnalytic",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "effros",
+      "source": "Introduction, lines 122–126; SectionCoanalytic",
+      "description": "Standardness of the Effros space on a Polish space and its Borel compact-set subspace",
+      "status": "verified",
+      "declaration": "PaperFormalization.effros_standardBorel_and_compacts",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "banach_coding",
+      "source": "Introduction, lines 122–126",
+      "description": "Every separable real Banach space has a closed-subspace code up to linear isometry",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_banachCode_linearIsometryEquiv",
+      "module": "PaperFormalization.CodingCorollaries"
+    },
+    {
+      "id": "complemented_classes",
+      "source": "Introduction, lines 136–138 and 199–204",
+      "description": "The isometric complemented-copy class, alongside the isomorphic complemented-copy class",
+      "status": "verified",
+      "declaration": "PaperFormalization.isometricComplementedClass",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "property_classes",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Sum-stable properties inherited by complemented subspaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsL1StableComplementedProperty",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "ap_class",
+      "source": "ThmAPisCoanalytic",
+      "description": "The approximation property in the Effros Banach-space coding",
+      "status": "verified",
+      "declaration": "PaperFormalization.approximationPropertyClass",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "ap_closure",
+      "source": "Following Theorem.Map.Phi; Corollary.CCE.anyE.CA",
+      "description": "Approximation property belongs to the complemented-hereditary sum-stable class",
+      "status": "verified",
+      "declaration": "PaperFormalization.approximationProperty_isL1StableComplemented",
+      "module": "PaperFormalization.ApproximationStability"
+    },
+    {
+      "id": "schur_closure",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Schur property belongs to the complemented-hereditary sum-stable class",
+      "status": "verified",
+      "declaration": "PaperFormalization.schurProperty_isL1StableComplemented",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "rnp_closure",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Radon–Nikodým property belongs to the sum-stable class",
+      "status": "verified",
+      "declaration": "PaperFormalization.radonNikodymProperty_isL1Stable",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "no_ap_exists",
+      "source": "Cor.Smith proof; Enflo1973Acta, Theorem 1",
+      "description": "Existence of a separable Banach space without the approximation property",
+      "status": "not_started"
+    },
+    {
+      "id": "isomorphism_analytic",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Dodos (P7)",
+      "description": "Analyticity of the isomorphism relation for coded real Banach spaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelAnalytic_isomorphism",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "membership_borel",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Borel point membership for coded spaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.measurableSet_mem",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "dense_selectors",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Countable Borel dense selectors for nonempty closed hit-measurable fibers in a Polish metric space",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_measurable_dense_selectors",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "complementarity_relation",
+      "source": "Prop.Containing.Complemented.is.Analytic proof",
+      "description": "Analyticity of the complemented-subspace relation with the inclusion fixed",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelAnalytic_isComplementedSubspace",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "dual_coding",
+      "source": "ThmDualityPairing",
+      "description": "Borel compact dual-ball assignment, linear isometry onto its normed span, and Borel pairing",
+      "status": "verified",
+      "declaration": "PaperFormalization.borel_parametrized_dualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "ap_witness",
+      "source": "ThmAPisCoanalytic",
+      "description": "Countable finite-rank approximation tests for each ambient compact set containing zero",
+      "status": "verified",
+      "declaration": "PaperFormalization.hasApproximationProperty_iff_ambient_test",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "tree_topology",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Product Boolean topology and Borel membership cylinders",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.isClopen_nodes",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "trees_complete",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Every analytic image in a standard Borel space Borel-reduces to the ill-founded trees",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.analyticImage_reduces_illFounded",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "branch_l1",
+      "source": "Eq.Pbeta",
+      "description": "Canonical ℓ₁ branch enumeration isometry and the induced operator Pβ",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchOperator",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "tree_quotient",
+      "source": "Following Eq.Pbeta",
+      "description": "Closed span of branch kernels and quotient spaces associated with trees",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "tree_order",
+      "source": "Eq.Order.Tree.proof",
+      "description": "The countable order from transfinite pruning decreases on every actual successor subtree",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.order_successor_lt",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "kernel_dropping",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Dropping the root identifies the matching branch kernel with the tail branch kernel",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_successorL1_branchKernel",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "tree_decomposition",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "The root quotient is linearly isometric to the ℓ₁ sum of successor tree spaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpaceRootQuotientL1Equiv",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "branch_projection",
+      "source": "ThmIFnotAP proof",
+      "description": "The branch projection maps the common closed kernel span into the included branch kernel",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection_maps_branchKernelSpan",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "l1_quotient_exists",
+      "source": "Theorem.Map.Phi proof; existence of the isometric quotient operator",
+      "description": "Every separable real Banach space is a surjective isometric quotient of ℓ₁",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_l1_isometricQuotient",
+      "module": "PaperFormalization.L1Quotient"
+    },
+    {
+      "id": "borel_assignment",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "The assignment is Borel given the ambient quotient embedding into C[0,1]",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_treeAssignment",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "main_reduction",
+      "source": "Theorem.Map.Phi",
+      "description": "One Borel map satisfies the well-founded and ill-founded conclusions of the main theorem",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_borelReduction",
+      "module": "PaperFormalization.MainReduction"
+    },
+    {
+      "id": "cc_complete_analytic",
+      "source": "CorCCE.notSchur.NotAP",
+      "description": "Complete analyticity when the fixed space fails a property in the complemented-hereditary class",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_complementablyEmbeds",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "cc_union_complete_analytic",
+      "source": "Corollary.CCE.anyE.CA",
+      "description": "Complete analyticity of the union over spaces without AP",
+      "status": "in_progress"
+    },
+    {
+      "id": "cc_isometric_variants",
+      "source": "Following Corollary.CCE.anyE.CA",
+      "description": "Complete analyticity of the fixed-space isometric complemented-copy class under the stated property hypothesis",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_isometricComplementedClass",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "analytic_family_universal",
+      "source": "Cor.Analytic.Sub.universal",
+      "description": "An analytic family containing the common complemented-hereditary class is complementably universal",
+      "status": "verified",
+      "declaration": "PaperFormalization.analytic_family_contains_complemented_copy",
+      "module": "PaperFormalization.AnalyticUniversality"
+    },
+    {
+      "id": "ap_complete_coanalytic",
+      "source": "Cor.Smith",
+      "description": "Complete coanalyticity of the approximation property",
+      "status": "in_progress"
+    },
+    {
+      "id": "cc_analytic",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Proposition 2.1, analyticity of complemented isomorphic containment",
+      "status": "verified",
+      "declaration": "PaperFormalization.analyticSet_complementablyEmbeds",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "ap_coanalytic",
+      "source": "ThmAPisCoanalytic",
+      "description": "Proposition 2.2, coanalyticity of the approximation property",
+      "status": "verified",
+      "declaration": "PaperFormalization.analyticSet_not_hasApproximationProperty",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "wf_properties",
+      "source": "TheoremWFhasAP",
+      "description": "Every well-founded tree space satisfies every property in the sum-stable class",
+      "status": "verified",
+      "declaration": "PaperFormalization.wellFounded_treeSpace_has_property",
+      "module": "PaperFormalization.WellFoundedReduction"
+    },
+    {
+      "id": "if_complemented",
+      "source": "ThmIFnotAP",
+      "description": "Ill-founded tree quotients contain a 1-complemented isometric copy of the target",
+      "status": "verified",
+      "declaration": "PaperFormalization.illFounded_isometricOneComplementablyEmbeds",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "ap_complemented",
+      "source": "Corollary.CCE.anyE.CA",
+      "description": "The approximation property passes to complemented subspaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasApproximationProperty.of_complementablyEmbeds",
+      "module": "PaperFormalization.Approximation"
+    },
+    {
+      "id": "tree_characteristic_function",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Characteristic function into the Boolean product",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.code",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "tree_induced_topology",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Topology induced by the Boolean product",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.instTopologicalSpace",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "tree_borel_measurable_space",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Borel sigma algebra of the tree topology",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.instMeasurableSpace",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "tree_characteristic_closed_range",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Prefix closure defines a closed subset of the Boolean product",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.isClosed_range_code",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "tree_characteristic_closed_embedding",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "The characteristic coding is a closed embedding",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.isClosedEmbedding_code",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "tree_polish",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "The tree space is Polish",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.instPolishSpace",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "tree_borel_space",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Compatibility of the tree topology and measurable structure",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.instBorelSpace",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "branch_relation_closed",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "The tree-branch incidence relation is closed",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.isClosed_branchRelation",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "ill_founded_analytic",
+      "source": "SectionCompleteCoanalytic, line 335",
+      "description": "Analyticity of the ill-founded trees",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.analyticSet_illFounded",
+      "module": "PaperFormalization.TreeTopology"
+    },
+    {
+      "id": "real_l1",
+      "source": "SectionCompleteCoanalytic, Eq.Pbeta",
+      "description": "Real ℓ₁ spaces with arbitrary coordinate index",
+      "status": "verified",
+      "declaration": "PaperFormalization.L1",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "l1_synthesis",
+      "source": "Eq.Pbeta; ThmIFnotAP proof",
+      "description": "Operator on ℓ₁ given by a bounded family of vectors",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1Operator",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "l1_synthesis_bound",
+      "source": "ThmIFnotAP proof",
+      "description": "Operator norm bounded by the uniform coordinate bound",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1Operator_norm_le",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "l1_synthesis_on_single",
+      "source": "ThmIFnotAP proof",
+      "description": "Action on a coordinate vector",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1Operator_single",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_inclusion",
+      "source": "Eq.Pbeta",
+      "description": "Inclusion of ℓ₁ along branch prefixes",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchInclusion",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "depth_operator",
+      "source": "ThmIFnotAP proof",
+      "description": "Collapses all tree coordinates of the same length",
+      "status": "verified",
+      "declaration": "PaperFormalization.collapseToDepth",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_inclusion_bound",
+      "source": "ThmIFnotAP proof",
+      "description": "Branch inclusion is contractive",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_branchInclusion_le",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "depth_operator_bound",
+      "source": "ThmIFnotAP proof",
+      "description": "Depth operator is contractive",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_collapseToDepth_le",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "depth_left_inverse",
+      "source": "ThmIFnotAP proof",
+      "description": "Depth operator retracts any branch inclusion",
+      "status": "verified",
+      "declaration": "PaperFormalization.collapseToDepth_branchInclusion",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_kernel_span",
+      "source": "Following Eq.Pbeta",
+      "description": "Closed span of the included branch kernels",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchKernelSpan",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_kernel_span_closed",
+      "source": "Following Eq.Pbeta",
+      "description": "Closedness of the common kernel span",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_branchKernelSpan",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "ambient_tree_quotient",
+      "source": "Following Eq.Pbeta",
+      "description": "Ambient quotient by the closed branch kernel span",
+      "status": "verified",
+      "declaration": "PaperFormalization.TreeQuotient",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_kernel_depth",
+      "source": "ThmIFnotAP proof",
+      "description": "Depth operator carries the common kernel span into the operator kernel",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchKernelSpan_le_depthKernel",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_kernel_inclusion",
+      "source": "ThmIFnotAP proof",
+      "description": "The common quotient kills the included branch kernel",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchInclusion_maps_ker",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "supported_l1",
+      "source": "Following Eq.Pbeta",
+      "description": "The subspace of ℓ₁ coordinate functions supported on T",
+      "status": "verified",
+      "declaration": "PaperFormalization.supportedL1",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "tree_space_closure_image",
+      "source": "Following Eq.Pbeta",
+      "description": "The tree space is the closure of the quotient image of ℓ₁(T)",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace_eq_closure_image",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "tree_space_preimage",
+      "source": "Following Eq.Pbeta",
+      "description": "The full preimage of the tree space is the closure of ℓ₁(T) + Z",
+      "status": "verified",
+      "declaration": "PaperFormalization.comap_treeSpace",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_in_tree_space",
+      "source": "ThmIFnotAP proof",
+      "description": "A branch of T maps into the closed subspace generated by T",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchInclusion_mem_treeSpace",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "contractive_quotient_lift",
+      "source": "ThmIFnotAP proof",
+      "description": "A contractive operator descends contractively to a quotient",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_liftQL_apply_le",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "contractive_retract_embedding",
+      "source": "ThmIFnotAP proof",
+      "description": "A contractive retract of a contractive section witnesses a complemented isometric embedding",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsometricOneComplementablyEmbeds.of_contractive_retract",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "complemented_embedding_isometry",
+      "source": "ThmIFnotAP proof",
+      "description": "Complemented isometric embeddings transport across a linear isometry equivalence",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsometricOneComplementablyEmbeds.of_isometryEquiv",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "operator_kernel_closed",
+      "source": "ThmIFnotAP proof",
+      "description": "The kernel defining the branch quotient is closed",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_l1Kernel",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "branch_quotient_embedding",
+      "source": "ThmIFnotAP proof",
+      "description": "Each branch yields a contractively complemented isometric copy of the operator quotient",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchQuotient_complementablyEmbeds",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "subspace_quotient_isometry",
+      "source": "Following Eq.Pbeta",
+      "description": "Isometry between a quotient subspace and the quotient of its full preimage",
+      "status": "verified",
+      "declaration": "PaperFormalization.quotientPreimageIsometry",
+      "module": "PaperFormalization.TreeReduction"
+    },
+    {
+      "id": "tree_successor",
+      "source": "Eq.Order.Tree.proof",
+      "description": "The subtree after the first node m",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.successor",
+      "module": "PaperFormalization.TreeInduction"
+    },
+    {
+      "id": "tree_child_relation",
+      "source": "Eq.Order.Tree.proof",
+      "description": "Immediate successor subtrees indexed by actual child nodes",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.IsChild",
+      "module": "PaperFormalization.TreeInduction"
+    },
+    {
+      "id": "tree_accessibility",
+      "source": "Eq.Order.Tree.proof",
+      "description": "Absence of an infinite branch gives accessibility under the successor relation",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.acc_isChild",
+      "module": "PaperFormalization.TreeInduction"
+    },
+    {
+      "id": "tree_successor_induction",
+      "source": "Eq.Order.Tree.proof",
+      "description": "Induction over immediate successor subtrees of a well-founded tree",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.induction_on_successors",
+      "module": "PaperFormalization.TreeInduction"
+    },
+    {
+      "id": "closed_subspace_model",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "Closed real linear subspaces of an ambient space",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "open_hit_generator",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "Sets of closed subspaces meeting a fixed open set",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.hit",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "closed_subspace_effros",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "Effros σ-algebra generated by the open-hit sets",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.effros",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "closed_span_of_nodes",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "Closed span of vectors associated with the nodes of a tree",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.spanOfNodes",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "finite_span_criterion",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "An open hit of a closed span is detected by a finite set of nodes",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.spanOfNodes_hit_iff",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "borel_closed_span",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "Borel measurability of the closed span of vectors indexed by tree nodes",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.measurable_spanOfNodes",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "banach_ambient",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "The real continuous functions on [0,1] with the supremum norm",
+      "status": "verified",
+      "declaration": "PaperFormalization.BanachAmbient",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "banach_code_type",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "The manuscript coding by closed subspaces of C[0,1]",
+      "status": "verified",
+      "declaration": "PaperFormalization.BanachCode",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "tree_assignment_map",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "Closed span of the images of tree coordinate vectors in C[0,1]",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeAssignment",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "tree_assignment_image",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "The coded output is exactly the image of the reduction space",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeAssignment_eq_map",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "tree_assignment_isometric",
+      "source": "Theorem.Map.Phi proof; Introduction, lines 122–126",
+      "description": "The restriction of the ambient embedding identifies the output isometrically",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeAssignment_isometry",
+      "module": "PaperFormalization.BorelAssignment"
+    },
+    {
+      "id": "geometric_approximation_lift",
+      "source": "Theorem.Map.Phi proof; existence of the isometric quotient operator",
+      "description": "Geometrically improving approximate lifts yield an exact preimage with a norm bound",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_preimage_of_geometric_approximation",
+      "module": "PaperFormalization.L1Quotient"
+    },
+    {
+      "id": "l1_operator_approximation",
+      "source": "Theorem.Map.Phi proof; existence of the isometric quotient operator",
+      "description": "A dense sequence of unit ball vectors yields a contraction with arbitrarily accurate norm-bounded lifts",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_l1_operator_approximation",
+      "module": "PaperFormalization.L1Quotient"
+    },
+    {
+      "id": "quotient_lift_isometric",
+      "source": "Theorem.Map.Phi proof; existence of the isometric quotient operator",
+      "description": "Contraction and exact preimages with nearly minimal norm imply that the induced quotient map is an isometry",
+      "status": "verified",
+      "declaration": "PaperFormalization.isometry_quotientLift_of_almost_minimal_preimages",
+      "module": "PaperFormalization.L1Quotient"
+    },
+    {
+      "id": "successor_treeRootLine",
+      "source": "TheoremWFhasAP proof, root-only base case",
+      "description": "Checked supporting declaration treeRootLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeRootLine",
+      "module": "PaperFormalization.TreeRoot"
+    },
+    {
+      "id": "successor_isClosed_treeRootLine",
+      "source": "TheoremWFhasAP proof, root-only base case",
+      "description": "Checked supporting declaration isClosed_treeRootLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_treeRootLine",
+      "module": "PaperFormalization.TreeRoot"
+    },
+    {
+      "id": "successor_treeRootLine_le_treeSpace",
+      "source": "TheoremWFhasAP proof, root-only base case",
+      "description": "Checked supporting declaration treeRootLine_le_treeSpace for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeRootLine_le_treeSpace",
+      "module": "PaperFormalization.TreeRoot"
+    },
+    {
+      "id": "successor_treeSpace_le_rootLine",
+      "source": "TheoremWFhasAP proof, root-only base case",
+      "description": "Checked supporting declaration treeSpace_le_rootLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace_le_rootLine",
+      "module": "PaperFormalization.TreeRoot"
+    },
+    {
+      "id": "successor_treeSpace_finiteDimensional_of_root_only",
+      "source": "TheoremWFhasAP proof, root-only base case",
+      "description": "The empty and root-only cases yield spaces of dimension at most one",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace_finiteDimensional_of_root_only",
+      "module": "PaperFormalization.TreeRoot"
+    },
+    {
+      "id": "successor_l1Operator_ext",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration l1Operator_ext for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1Operator_ext",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_l1Push",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration l1Push for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1Push",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_l1Push_single",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration l1Push_single for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1Push_single",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_norm_l1Push_le",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration norm_l1Push_le for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_l1Push_le",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_shiftL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration shiftL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.shiftL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_dropFirstL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration dropFirstL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.dropFirstL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_prependL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration prependL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.prependL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_successorL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration successorL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_dropFirstL1_shiftL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration dropFirstL1_shiftL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.dropFirstL1_shiftL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_successorL1_prependL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration successorL1_prependL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorL1_prependL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_prependBranch",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration prependBranch for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.prependBranch",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_successorL1_branchInclusion",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration successorL1_branchInclusion for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorL1_branchInclusion",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_branchInclusion_prepend_shift",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration branchInclusion_prepend_shift for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchInclusion_prepend_shift",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_rootCoordinateLine",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration rootCoordinateLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.rootCoordinateLine",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_rootImage",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration rootImage for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.rootImage",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_isClosed_rootImage",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration isClosed_rootImage for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_rootImage",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_tailOperator",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration tailOperator for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.tailOperator",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_tailOperator_comp_dropFirstL1",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration tailOperator_comp_dropFirstL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.tailOperator_comp_dropFirstL1",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_map_dropFirstL1_ker",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration map_dropFirstL1_ker for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_dropFirstL1_ker",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_successorL1_maps_branchKernelSpan",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration successorL1_maps_branchKernelSpan for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorL1_maps_branchKernelSpan",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_prependL1_maps_branchKernelSpan",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration prependL1_maps_branchKernelSpan for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.prependL1_maps_branchKernelSpan",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_map_successorL1_rootCoordinateLine",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration map_successorL1_rootCoordinateLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_successorL1_rootCoordinateLine",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_map_successorL1_branchKernelSpan",
+      "source": "Eq.DimKernels and Claim.left.behind",
+      "description": "Checked supporting declaration map_successorL1_branchKernelSpan for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_successorL1_branchKernelSpan",
+      "module": "PaperFormalization.SuccessorOperators"
+    },
+    {
+      "id": "successor_SuccessorCoordinates",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration SuccessorCoordinates for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.SuccessorCoordinates",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootL1",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootL1",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_norm_splitRootL1_le",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration norm_splitRootL1_le for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_splitRootL1_le",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootL1",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootL1",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_norm_assembleRootL1_le",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration norm_assembleRootL1_le for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_assembleRootL1_le",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootL1_apply",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootL1_apply for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootL1_apply",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootL1_single",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootL1_single for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootL1_single",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootL1_prependL1",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootL1_prependL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootL1_prependL1",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootL1_assembleRootL1",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootL1_assembleRootL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootL1_assembleRootL1",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_retainRootL1",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration retainRootL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.retainRootL1",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootL1_splitRootL1",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootL1_splitRootL1 for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootL1_splitRootL1",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_retainRootL1_mem_rootCoordinateLine",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration retainRootL1_mem_rootCoordinateLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.retainRootL1_mem_rootCoordinateLine",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_rootAugmentedKernel",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration rootAugmentedKernel for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.rootAugmentedKernel",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_isClosed_rootAugmentedKernel",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration isClosed_rootAugmentedKernel for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_rootAugmentedKernel",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_successorKernelFamily",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration successorKernelFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorKernelFamily",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_mem_successorKernelFamily",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration mem_successorKernelFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.mem_successorKernelFamily",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_isClosed_successorKernelFamily",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration isClosed_successorKernelFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_successorKernelFamily",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootL1_maps_rootAugmentedKernel",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootL1_maps_rootAugmentedKernel for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootL1_maps_rootAugmentedKernel",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootL1_maps_successorKernelFamily",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootL1_maps_successorKernelFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootL1_maps_successorKernelFamily",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_map_splitRootL1_rootAugmentedKernel",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration map_splitRootL1_rootAugmentedKernel for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_splitRootL1_rootAugmentedKernel",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_map_splitRootL1_rootCoordinateLine",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration map_splitRootL1_rootCoordinateLine for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_splitRootL1_rootCoordinateLine",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_map_splitRootL1_branchKernelSpan",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "The image of the common branch kernel after splitting is the coordinatewise tail kernel",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_splitRootL1_branchKernelSpan",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootQuotient",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootQuotient for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootQuotient",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootQuotient",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootQuotient for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootQuotient",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootQuotient_splitRootQuotient",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootQuotient_splitRootQuotient for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootQuotient_splitRootQuotient",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootQuotient_assembleRootQuotient",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootQuotient_assembleRootQuotient for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootQuotient_assembleRootQuotient",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_splitRootQuotient_norm_apply_le",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration splitRootQuotient_norm_apply_le for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.splitRootQuotient_norm_apply_le",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_assembleRootQuotient_norm_apply_le",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "Checked supporting declaration assembleRootQuotient_norm_apply_le for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.assembleRootQuotient_norm_apply_le",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_rootQuotientSplitEquiv",
+      "source": "Eq.D.ind.iso and Eq.isomorphism.2",
+      "description": "The root-augmented quotient is isometric to the quotient of the coordinate sum",
+      "status": "verified",
+      "declaration": "PaperFormalization.rootQuotientSplitEquiv",
+      "module": "PaperFormalization.SuccessorCoordinates"
+    },
+    {
+      "id": "successor_l1CoordinateQuotient",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration l1CoordinateQuotient for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1CoordinateQuotient",
+      "module": "PaperFormalization.L1FamilyQuotient"
+    },
+    {
+      "id": "successor_norm_l1CoordinateQuotient_le",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration norm_l1CoordinateQuotient_le for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_l1CoordinateQuotient_le",
+      "module": "PaperFormalization.L1FamilyQuotient"
+    },
+    {
+      "id": "successor_l1CoordinateQuotient_apply",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration l1CoordinateQuotient_apply for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1CoordinateQuotient_apply",
+      "module": "PaperFormalization.L1FamilyQuotient"
+    },
+    {
+      "id": "successor_l1CoordinateQuotient_single",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration l1CoordinateQuotient_single for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1CoordinateQuotient_single",
+      "module": "PaperFormalization.L1FamilyQuotient"
+    },
+    {
+      "id": "successor_l1CoordinateQuotient_nearPreimages",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration l1CoordinateQuotient_nearPreimages for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1CoordinateQuotient_nearPreimages",
+      "module": "PaperFormalization.L1FamilyQuotient"
+    },
+    {
+      "id": "successor_l1CoordinateQuotientEquiv",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "The quotient of an ℓ₁ sum by its coordinate kernels is the ℓ₁ sum of the quotients",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1CoordinateQuotientEquiv",
+      "module": "PaperFormalization.L1FamilyQuotient"
+    },
+    {
+      "id": "successor_successorKernelFamily_eq_ker",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration successorKernelFamily_eq_ker for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorKernelFamily_eq_ker",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_treeRootLine_eq_map",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration treeRootLine_eq_map for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeRootLine_eq_map",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_ambientSuccessorQuotientEquiv",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "The ambient root quotient is linearly isometric to the sum of the ambient successor quotients",
+      "status": "verified",
+      "declaration": "PaperFormalization.ambientSuccessorQuotientEquiv",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_ambientSuccessorQuotientEquiv_on_node",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration ambientSuccessorQuotientEquiv_on_node for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.ambientSuccessorQuotientEquiv_on_node",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_successorTreeFamily",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration successorTreeFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorTreeFamily",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_mem_successorTreeFamily",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration mem_successorTreeFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.mem_successorTreeFamily",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_isClosed_successorTreeFamily",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration isClosed_successorTreeFamily for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_successorTreeFamily",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_isClosed_treeSpace_map_root",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration isClosed_treeSpace_map_root for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.isClosed_treeSpace_map_root",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_map_treeSpace_ambientSuccessor",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "The ambient isometry sends the tree space after root quotienting onto the successor subspace",
+      "status": "verified",
+      "declaration": "PaperFormalization.map_treeSpace_ambientSuccessor",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_submoduleQuotientIsometry",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration submoduleQuotientIsometry for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.submoduleQuotientIsometry",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_treeSpaceRootQuotientEquiv",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration treeSpaceRootQuotientEquiv for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpaceRootQuotientEquiv",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_successorTreeFamilyEquiv",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration successorTreeFamilyEquiv for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.successorTreeFamilyEquiv",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "successor_treeSpace_successor_eq_bot_of_not_mem",
+      "source": "Eq.the.isomorphism.3 and Claim.left.behind",
+      "description": "Checked supporting declaration treeSpace_successor_eq_bot_of_not_mem for the successor decomposition",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace_successor_eq_bot_of_not_mem",
+      "module": "PaperFormalization.AmbientSuccessor"
+    },
+    {
+      "id": "wf_RealBanachSpace",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Bundled real Banach spaces for the property predicates",
+      "status": "verified",
+      "declaration": "PaperFormalization.RealBanachSpace",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_RealBanachSpace.instCoeSort",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration RealBanachSpace.instCoeSort",
+      "status": "verified",
+      "declaration": "PaperFormalization.RealBanachSpace.instCoeSort",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_RealBanachSpace.of",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration RealBanachSpace.of",
+      "status": "verified",
+      "declaration": "PaperFormalization.RealBanachSpace.of",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_IsL1StableProperty",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Isomorphism invariance, the two base spaces, and stability under ℓ₁ sums",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsL1StableProperty",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_of_subsingleton",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration of_subsingleton",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsL1StableProperty.of_subsingleton",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_of_finrank_le_one",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration of_finrank_le_one",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsL1StableProperty.of_finrank_le_one",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_l1BoolProductEquiv",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration l1BoolProductEquiv",
+      "status": "verified",
+      "declaration": "PaperFormalization.l1BoolProductEquiv",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_IsL1StableProperty.prod",
+      "source": "Theorem.Map.Phi and CorCCE.notSchur.NotAP",
+      "description": "Stability under ℓ₁ sums implies stability under two-factor products",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsL1StableProperty.prod",
+      "module": "PaperFormalization.BanachProperties"
+    },
+    {
+      "id": "wf_completeSpace_treeSpace",
+      "source": "TheoremWFhasAP proof, splitting off the finite-dimensional root line",
+      "description": "Supporting declaration completeSpace_treeSpace",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeSpace_treeSpace",
+      "module": "PaperFormalization.WellFoundedSplit"
+    },
+    {
+      "id": "wf_treeSpace_root_finiteDimensional",
+      "source": "TheoremWFhasAP proof, splitting off the finite-dimensional root line",
+      "description": "The root line inside a tree space has dimension at most one",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace_root_finiteDimensional",
+      "module": "PaperFormalization.WellFoundedSplit"
+    },
+    {
+      "id": "wf_treeSpace_equiv_root_prod_successorSum",
+      "source": "TheoremWFhasAP proof, splitting off the finite-dimensional root line",
+      "description": "The tree space splits continuously as its root line and successor sum",
+      "status": "verified",
+      "declaration": "PaperFormalization.treeSpace_equiv_root_prod_successorSum",
+      "module": "PaperFormalization.WellFoundedSplit"
+    },
+    {
+      "id": "wf_completeSpace_banachCode",
+      "source": "Theorem.Map.Phi proof, assembly given the ambient embedding",
+      "description": "Supporting declaration completeSpace_banachCode",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeSpace_banachCode",
+      "module": "PaperFormalization.MainReductionAssembly"
+    },
+    {
+      "id": "wf_IsometricOneComplementablyEmbeds.of_target_isometryEquiv",
+      "source": "Theorem.Map.Phi proof, assembly given the ambient embedding",
+      "description": "Supporting declaration IsometricOneComplementablyEmbeds.of_target_isometryEquiv",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsometricOneComplementablyEmbeds.of_target_isometryEquiv",
+      "module": "PaperFormalization.MainReductionAssembly"
+    },
+    {
+      "id": "wf_exists_borelReduction_of_ambientEmbedding",
+      "source": "Theorem.Map.Phi proof, assembly given the ambient embedding",
+      "description": "Both tree cases and the Borel map assemble given the ambient isometric embedding",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_borelReduction_of_ambientEmbedding",
+      "module": "PaperFormalization.MainReductionAssembly"
+    },
+    {
+      "id": "separability_countable_l1",
+      "source": "Theorem.Map.Phi proof, choosing the ambient embedding",
+      "description": "Real ℓ₁ on a countable index set is separable",
+      "status": "verified",
+      "declaration": "PaperFormalization.separableSpace_l1",
+      "module": "PaperFormalization.MainReductionAssembly"
+    },
+    {
+      "id": "separability_ambient_quotient",
+      "source": "Theorem.Map.Phi proof, choosing the ambient embedding",
+      "description": "The ambient tree quotient is separable",
+      "status": "verified",
+      "declaration": "PaperFormalization.separableSpace_treeQuotient",
+      "module": "PaperFormalization.MainReductionAssembly"
+    },
+    {
+      "id": "banach_mazur_WeakStarUnitBall",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration WeakStarUnitBall",
+      "status": "verified",
+      "declaration": "PaperFormalization.WeakStarUnitBall",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_compactSpace_weakStarUnitBall",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration compactSpace_weakStarUnitBall",
+      "status": "verified",
+      "declaration": "PaperFormalization.compactSpace_weakStarUnitBall",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_nonempty_weakStarUnitBall",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration nonempty_weakStarUnitBall",
+      "status": "verified",
+      "declaration": "PaperFormalization.nonempty_weakStarUnitBall",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_weakStarBallEvaluation",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration weakStarBallEvaluation",
+      "status": "verified",
+      "declaration": "PaperFormalization.weakStarBallEvaluation",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_weakStarBallLinearIsometry",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Evaluation on the weak-star dual unit ball embeds the target linearly and isometrically",
+      "status": "verified",
+      "declaration": "PaperFormalization.weakStarBallLinearIsometry",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_continuousMapPrecompIsometry",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration continuousMapPrecompIsometry",
+      "status": "verified",
+      "declaration": "PaperFormalization.continuousMapPrecompIsometry",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_exists_cantorSpace_linearIsometry",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Every separable real normed space embeds linearly and isometrically into the real continuous functions on Cantor space",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_cantorSpace_linearIsometry",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "banach_mazur_compactSpace_cantorSet",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration compactSpace_cantorSet",
+      "status": "verified",
+      "declaration": "PaperFormalization.compactSpace_cantorSet",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_one_mem_cantorSet",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration one_mem_cantorSet",
+      "status": "verified",
+      "declaration": "PaperFormalization.one_mem_cantorSet",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorLeft_isGreatest",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorLeft_isGreatest",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorLeft_isGreatest",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorRight_isLeast",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorRight_isLeast",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorRight_isLeast",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorLeft",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorLeft",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorLeft",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorRight",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorRight",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorRight",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorLeft_le",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorLeft_le",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorLeft_le",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_le_cantorRight",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration le_cantorRight",
+      "status": "verified",
+      "declaration": "PaperFormalization.le_cantorRight",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorLeft_max",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorLeft_max",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorLeft_max",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorRight_min",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorRight_min",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorRight_min",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorGap",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorGap",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorGap",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorLeft_eq",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorLeft_eq",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorLeft_eq",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorRight_eq",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorRight_eq",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorRight_eq",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorWeight",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorWeight",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorWeight",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorWeight_nonneg",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorWeight_nonneg",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorWeight_nonneg",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorWeight_le_one",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorWeight_le_one",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorWeight_le_one",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorWeight_barycenter",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorWeight_barycenter",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorWeight_barycenter",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorEndpoints_constant_on_gap",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorEndpoints_constant_on_gap",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorEndpoints_constant_on_gap",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorWeight_distance_barycenter",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorWeight_distance_barycenter",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorWeight_distance_barycenter",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorInterp",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorInterp",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorInterp",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorInterp_of_mem",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration cantorInterp_of_mem",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorInterp_of_mem",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorInterp_local_bound",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Continuity at Cantor points via the affine average of endpoint distances",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorInterp_local_bound",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_continuousAt_cantorInterp_off",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration continuousAt_cantorInterp_off",
+      "status": "verified",
+      "declaration": "PaperFormalization.continuousAt_cantorInterp_off",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_continuousAt_cantorInterp_on",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Supporting declaration continuousAt_cantorInterp_on",
+      "status": "verified",
+      "declaration": "PaperFormalization.continuousAt_cantorInterp_on",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_continuous_cantorInterp",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Endpoint interpolation is continuous on the full unit interval",
+      "status": "verified",
+      "declaration": "PaperFormalization.continuous_cantorInterp",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_cantorExtensionIsometry",
+      "source": "Introduction, Banach–Mazur theorem and Theorem.Map.Phi proof",
+      "description": "Affine interpolation extends real continuous Cantor functions linearly and isometrically",
+      "status": "verified",
+      "declaration": "PaperFormalization.cantorExtensionIsometry",
+      "module": "PaperFormalization.CantorExtension"
+    },
+    {
+      "id": "banach_mazur_exists_banachAmbient_linearIsometry",
+      "source": "Theorem.Map.Phi",
+      "description": "Banach–Mazur isometric universality of the real space C[0,1]",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_banachAmbient_linearIsometry",
+      "module": "PaperFormalization.MainReduction"
+    },
+    {
+      "id": "analytic_reduction_analyticSet_preimage_measurable",
+      "source": "Cor.Analytic.Sub.universal proof, analytic preimages",
+      "description": "Borel preimages preserve analyticity between Polish presentations",
+      "status": "verified",
+      "declaration": "PaperFormalization.analyticSet_preimage_measurable",
+      "module": "PaperFormalization.AnalyticPreimage"
+    },
+    {
+      "id": "analytic_reduction_approximationTree",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration approximationTree",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.approximationTree",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_isOpen_mem_approximationTree",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration isOpen_mem_approximationTree",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.isOpen_mem_approximationTree",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_measurable_approximationTree",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration measurable_approximationTree",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.measurable_approximationTree",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_approximationTree_illFounded_iff",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration approximationTree_illFounded_iff",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.approximationTree_illFounded_iff",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_analyticSet_reduces_illFounded",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration analyticSet_reduces_illFounded",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.analyticSet_reduces_illFounded",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_wellFounded_eq_compl_illFounded",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration wellFounded_eq_compl_illFounded",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.wellFounded_eq_compl_illFounded",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_analyticSet_compl_wellFounded",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration analyticSet_compl_wellFounded",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.analyticSet_compl_wellFounded",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_compl_analyticImage_reduces_wellFounded",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Every coanalytic set in a standard Borel space Borel-reduces to the well-founded trees",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.compl_analyticImage_reduces_wellFounded",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_pairedBranch",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration pairedBranch",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.pairedBranch",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_continuous_pairedBranch",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration continuous_pairedBranch",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.continuous_pairedBranch",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_treeOfRelation",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration treeOfRelation",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.treeOfRelation",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_pairedBranch_mem_treeOfRelation_iff",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration pairedBranch_mem_treeOfRelation_iff",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.pairedBranch_mem_treeOfRelation_iff",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_treeSections",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration treeSections",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.treeSections",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_analyticSet_treeSections",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration analyticSet_treeSections",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.analyticSet_treeSections",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_exists_treeSection_eq",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Supporting declaration exists_treeSection_eq",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.exists_treeSection_eq",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_exists_coanalytic_not_analytic_baire",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "Diagonalization of a universal analytic family produces a coanalytic non-analytic set",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.exists_coanalytic_not_analytic_baire",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_not_analyticSet_wellFounded",
+      "source": "SectionCompleteCoanalytic; Kechris Theorem 27.1",
+      "description": "The well-founded trees are not analytic",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.not_analyticSet_wellFounded",
+      "module": "PaperFormalization.TreeCompleteness"
+    },
+    {
+      "id": "analytic_reduction_measurableSet_hit",
+      "source": "Cor.Analytic.Sub.universal proof, the Effros coding",
+      "description": "Supporting declaration measurableSet_hit",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.measurableSet_hit",
+      "module": "PaperFormalization.EffrosEquality"
+    },
+    {
+      "id": "analytic_reduction_eq_of_hit_countableBasis",
+      "source": "Cor.Analytic.Sub.universal proof, the Effros coding",
+      "description": "Supporting declaration eq_of_hit_countableBasis",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.eq_of_hit_countableBasis",
+      "module": "PaperFormalization.EffrosEquality"
+    },
+    {
+      "id": "analytic_reduction_measurableSet_eq_of_measurable",
+      "source": "Cor.Analytic.Sub.universal proof, the Effros coding",
+      "description": "Equality of coded closed subspaces is measurable",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.measurableSet_eq_of_measurable",
+      "module": "PaperFormalization.EffrosEquality"
+    },
+    {
+      "id": "analytic_reduction_analyticSet_preimage_banachCode_image",
+      "source": "Cor.Analytic.Sub.universal",
+      "description": "Borel preimages into the tree space of analytic images in the Banach coding are analytic",
+      "status": "verified",
+      "declaration": "PaperFormalization.analyticSet_preimage_banachCode_image",
+      "module": "PaperFormalization.AnalyticUniversality"
+    },
+    {
+      "id": "effros_distance_fixed",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Measurable distance from a fixed point to a hit-measurable fiber",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_infDist_family",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "effros_distance_joint",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Jointly measurable distance to a hit-measurable fiber",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_infDist_family_apply",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "effros_selector_step",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Measurable choice of the next dense center",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_selectorStep",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "effros_selector_near",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Convergent measurable choices near an initial center",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_measurable_selector_near",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "subspace_selectors",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Borel dense selectors for closed subspace codes",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.exists_borel_dense_selectors",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "inclusion_borel",
+      "source": "Prop.Containing.Complemented.is.Analytic proof; Kechris 12.13",
+      "description": "Borel inclusion for coded spaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.measurableSet_le",
+      "module": "PaperFormalization.EffrosSelectors"
+    },
+    {
+      "id": "effros_closed_span",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Closed real span of a sequence",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.spanOfSequence",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "effros_closed_span_borel",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Closed span is measurable by testing finite rational combinations",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.measurable_spanOfSequence",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "effros_closed_span_inverse",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Closed span recovers a subspace from a dense sequence",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.spanOfSequence_eq_of_closure",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "effros_subspaces_standard",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Standard Borel structure for Effros closed subspaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.standardBorelSpace",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "banach_coding_standard",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Standard Borel coding by closed real subspaces of C[0,1]",
+      "status": "verified",
+      "declaration": "PaperFormalization.banachCode_standardBorel",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "ap_compact_inter_hits",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Measurable open-hit tests for the intersection of compact and closed fibers",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurableSet_hit_compact_inter_closed",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "ap_compact_selectors",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Borel dense selectors on nonempty compact subsets",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_borel_compact_selectors",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "ap_compact_parameter",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Compact subsets of the ambient space containing zero",
+      "status": "verified",
+      "declaration": "PaperFormalization.CompactsContainingZero",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "ap_compact_parameter_standard",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Standard Borel structure on compact sets containing zero",
+      "status": "verified",
+      "declaration": "PaperFormalization.compactsContainingZero_standardBorel",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "ap_compact_inter_selectors",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Borel dense selectors for the manuscript’s compact intersections",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_borel_compactSubspace_intersection_selectors",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "sequence_linear_bound",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Countable rational norm-inequality code for linear operators",
+      "status": "verified",
+      "declaration": "PaperFormalization.SequenceLinearBound",
+      "module": "PaperFormalization.OperatorCode"
+    },
+    {
+      "id": "sequence_linear_bound_extension",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Extension to a bounded linear operator on the whole space",
+      "status": "verified",
+      "declaration": "PaperFormalization.SequenceLinearBound.exists_operator",
+      "module": "PaperFormalization.OperatorCode"
+    },
+    {
+      "id": "sequence_linear_bound_necessity",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "The values of a bounded linear operator satisfy the norm code",
+      "status": "verified",
+      "declaration": "PaperFormalization.SequenceLinearBound.of_operator",
+      "module": "PaperFormalization.OperatorCode"
+    },
+    {
+      "id": "sequence_linear_bound_borel",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Borel test for the operator code",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurableSet_sequenceLinearBound",
+      "module": "PaperFormalization.OperatorCode"
+    },
+    {
+      "id": "banach_coding_polish_topology",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "A compatible Polish topology on the Effros Banach-space coding",
+      "status": "verified",
+      "declaration": "PaperFormalization.banachCodePolishTopology",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "cc_illFounded_reduction",
+      "source": "CorCCE.notSchur.NotAP",
+      "description": "Borel reduction of ill-foundedness to complemented containment",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_reduction_complementablyEmbeds",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "cc_isometric_union_complete_analytic",
+      "source": "Isometric variants following Corollary.CCE.anyE.CA",
+      "description": "Unconditional complete analyticity of the isometric union over spaces failing AP",
+      "status": "in_progress"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelAnalytic",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelAnalytic",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelAnalytic",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelAnalytic_iff_analyticSet",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelAnalytic.iff_analyticSet",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelAnalytic.iff_analyticSet",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelAnalytic_of_measurable_image",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelAnalytic.of_measurable_image",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelAnalytic.of_measurable_image",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelAnalytic_preimage",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelAnalytic.preimage",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelAnalytic.preimage",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelAnalytic_reduces_illFounded",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelAnalytic.reduces_illFounded",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelAnalytic.reduces_illFounded",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelCoanalytic",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelCoanalytic",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelCoanalytic",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelReduces",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelReduces",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelReduces",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelReduces_compl",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelReduces.compl",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelReduces.compl",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_BorelReduces_trans",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration BorelReduces.trans",
+      "status": "verified",
+      "declaration": "PaperFormalization.BorelReduces.trans",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_EffrosStandard_ClosedSubspaces_instContinuousConstSMulRat",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Supporting declaration ClosedSubspaces.instContinuousConstSMulRat",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.instContinuousConstSMulRat",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "support_EffrosStandard_ClosedSubspaces_instIsScalarTowerRatReal",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Supporting declaration ClosedSubspaces.instIsScalarTowerRatReal",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.instIsScalarTowerRatReal",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "support_EffrosStandard_ClosedSubspaces_instModuleRat",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Supporting declaration ClosedSubspaces.instModuleRat",
+      "status": "verified",
+      "declaration": "PaperFormalization.ClosedSubspaces.instModuleRat",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "support_DescriptiveClasses_CompleteAnalytic_reduces",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration CompleteAnalytic.reduces",
+      "status": "verified",
+      "declaration": "PaperFormalization.CompleteAnalytic.reduces",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DescriptiveClasses_CompleteCoanalytic",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration CompleteCoanalytic",
+      "status": "verified",
+      "declaration": "PaperFormalization.CompleteCoanalytic",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DualBallModel_DualCube",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration DualCube",
+      "status": "verified",
+      "declaration": "PaperFormalization.DualCube",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualBallModel_DualCube_range_toLInfinity",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Bounded coordinates identify the cube with the norm unit ball of ℓ∞",
+      "status": "verified",
+      "declaration": "PaperFormalization.DualCube.range_toLInfinity",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualBallModel_DualCube_toLInfinity",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration DualCube.toLInfinity",
+      "status": "verified",
+      "declaration": "PaperFormalization.DualCube.toLInfinity",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_hit",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.hit",
+      "status": "verified",
+      "declaration": "PaperFormalization.EffrosClosed.hit",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_measurableSet_hit",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.measurableSet_hit",
+      "status": "verified",
+      "declaration": "PaperFormalization.EffrosClosed.measurableSet_hit",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_measurableSet_isCompact",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.measurableSet_isCompact",
+      "status": "verified",
+      "declaration": "PaperFormalization.EffrosClosed.measurableSet_isCompact",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_measurableSpace",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.measurableSpace",
+      "status": "verified",
+      "declaration": "PaperFormalization.EffrosClosed.measurableSpace",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_standardBorelSpace",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.standardBorelSpace",
+      "status": "verified",
+      "declaration": "PaperFormalization.EffrosClosed.standardBorelSpace",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_ApproximationStability_HasApproximationProperty_lp_one",
+      "source": "Following Theorem.Map.Phi; Corollary.CCE.anyE.CA",
+      "description": "Stability of the approximation property under arbitrary ℓ₁ sums",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasApproximationProperty.lp_one",
+      "module": "PaperFormalization.ApproximationStability"
+    },
+    {
+      "id": "support_ApproximationStability_HasApproximationProperty_of_equiv",
+      "source": "Following Theorem.Map.Phi; Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration HasApproximationProperty.of_equiv",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasApproximationProperty.of_equiv",
+      "module": "PaperFormalization.ApproximationStability"
+    },
+    {
+      "id": "support_ApproximationStability_HasApproximationProperty_of_finiteDimensional",
+      "source": "Following Theorem.Map.Phi; Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration HasApproximationProperty.of_finiteDimensional",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasApproximationProperty.of_finiteDimensional",
+      "module": "PaperFormalization.ApproximationStability"
+    },
+    {
+      "id": "support_RadonNikodymProperty_HasRadonNikodymProperty",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration HasRadonNikodymProperty",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasRadonNikodymProperty",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_HasRadonNikodymProperty_lp_one",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Stability of the Radon–Nikodým property under arbitrary ℓ₁ sums",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasRadonNikodymProperty.lp_one",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_HasRadonNikodymProperty_of_complementablyEmbeds",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration HasRadonNikodymProperty.of_complementablyEmbeds",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasRadonNikodymProperty.of_complementablyEmbeds",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_SchurProperty_HasSchurProperty",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration HasSchurProperty",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasSchurProperty",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_HasSchurProperty_iff_weaklyConvergent",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration HasSchurProperty.iff_weaklyConvergent",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasSchurProperty.iff_weaklyConvergent",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_HasSchurProperty_lp_one",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Stability of the Schur property under arbitrary ℓ₁ sums",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasSchurProperty.lp_one",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_HasSchurProperty_of_complementablyEmbeds",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration HasSchurProperty.of_complementablyEmbeds",
+      "status": "verified",
+      "declaration": "PaperFormalization.HasSchurProperty.of_complementablyEmbeds",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_IsComplementedSubspace",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration IsComplementedSubspace",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsComplementedSubspace",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_IsometricallyComplementablyEmbeds",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration IsometricallyComplementablyEmbeds",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsometricallyComplementablyEmbeds",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_IsometricallyComplementablyEmbeds_complementablyEmbeds",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration IsometricallyComplementablyEmbeds.complementablyEmbeds",
+      "status": "verified",
+      "declaration": "PaperFormalization.IsometricallyComplementablyEmbeds.complementablyEmbeds",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_derivative",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.derivative",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.derivative",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_derivative_subset",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.derivative_subset",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.derivative_subset",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_isWellFounded_successor",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.isWellFounded_successor",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.isWellFounded_successor",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_mem_prune_limit",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.mem_prune_limit",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.mem_prune_limit",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_order",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.order",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.order",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_order_lt_omega_one",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Every well-founded tree has countable order",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.order_lt_omega_one",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_prune",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.prune",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.prune",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_prune_add_one",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.prune_add_one",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.prune_add_one",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_prune_empty_iff_order_le",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "The order is the least ordinal at which the pruning is empty",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.prune_empty_iff_order_le",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_prune_subset",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.prune_subset",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.prune_subset",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_prune_successor",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.prune_successor",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.prune_successor",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_prune_zero",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.prune_zero",
+      "status": "verified",
+      "declaration": "PaperFormalization.NatTree.prune_zero",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_ComplementedAnalytic_SequenceLinearBound_comp_isometries_iff",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Supporting declaration SequenceLinearBound.comp_isometries_iff",
+      "status": "verified",
+      "declaration": "PaperFormalization.SequenceLinearBound.comp_isometries_iff",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "support_ComplementedAnalytic_SequenceLinearBound_mono",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Supporting declaration SequenceLinearBound.mono",
+      "status": "verified",
+      "declaration": "PaperFormalization.SequenceLinearBound.mono",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "support_SchurProperty_WeaklyNull",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration WeaklyNull",
+      "status": "verified",
+      "declaration": "PaperFormalization.WeaklyNull",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_WeaklyNull_map",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration WeaklyNull.map",
+      "status": "verified",
+      "declaration": "PaperFormalization.WeaklyNull.map",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_borelAnalytic_complementablyEmbeds_relation",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Joint analyticity of isomorphic complemented containment",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelAnalytic_complementablyEmbeds_relation",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_borelAnalytic_isometricComplementedClass",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration borelAnalytic_isometricComplementedClass",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelAnalytic_isometricComplementedClass",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_borelAnalytic_isometricallyComplementablyEmbeds_relation",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Joint analyticity of isometric complemented containment",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelAnalytic_isometricallyComplementablyEmbeds_relation",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_borelAnalytic_isometry",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Analyticity of the linear isometry relation on coded Banach spaces",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelAnalytic_isometry",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_ApproximationCorollaries_borelCoanalytic_approximationPropertyClass",
+      "source": "Corollary.CCE.anyE.CA; Cor.Smith",
+      "description": "Supporting declaration borelCoanalytic_approximationPropertyClass",
+      "status": "verified",
+      "declaration": "PaperFormalization.borelCoanalytic_approximationPropertyClass",
+      "module": "PaperFormalization.ApproximationCorollaries"
+    },
+    {
+      "id": "support_BranchGeometry_branchEnumerationIsometry",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchEnumerationIsometry",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchEnumerationIsometry",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchInclusion_mem_supported",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchInclusion_mem_supported",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchInclusion_mem_supported",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchProjection",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchProjection",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchProjection_eq_self",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchProjection_eq_self",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection_eq_self",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchProjection_idempotent",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchProjection_idempotent",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection_idempotent",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchProjection_preserves_branchKernelSpan",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "The branch projection preserves the common closed branch-kernel span",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection_preserves_branchKernelSpan",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchProjection_properties",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchProjection_properties",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection_properties",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchProjection_single",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchProjection_single",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchProjection_single",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_BranchGeometry_branchTree",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "Supporting declaration branchTree",
+      "status": "verified",
+      "declaration": "PaperFormalization.branchTree",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_DualCoding_closure_range_unitBallSelector",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration closure_range_unitBallSelector",
+      "status": "verified",
+      "declaration": "PaperFormalization.closure_range_unitBallSelector",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_codedDualBall",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration codedDualBall",
+      "status": "verified",
+      "declaration": "PaperFormalization.codedDualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_codedDualBallHomeomorph",
+      "source": "ThmDualityPairing",
+      "description": "The dual-ball coding is a homeomorphism for the weak-star topologies",
+      "status": "verified",
+      "declaration": "PaperFormalization.codedDualBallHomeomorph",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_codedDualBallHomeomorph_apply",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration codedDualBallHomeomorph_apply",
+      "status": "verified",
+      "declaration": "PaperFormalization.codedDualBallHomeomorph_apply",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_codedDualEvaluation",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration codedDualEvaluation",
+      "status": "verified",
+      "declaration": "PaperFormalization.codedDualEvaluation",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_codedDualPairing",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration codedDualPairing",
+      "status": "verified",
+      "declaration": "PaperFormalization.codedDualPairing",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_complementedClass",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration complementedClass",
+      "status": "verified",
+      "declaration": "PaperFormalization.complementedClass",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_CodingCorollaries_completeAnalytic_complementedClass",
+      "source": "Introduction, Banach–Mazur coding; Cor.Smith; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "The fixed-space complete-analytic corollary expressed using Borel completeness",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_complementedClass",
+      "module": "PaperFormalization.CodingCorollaries"
+    },
+    {
+      "id": "support_DescriptiveClasses_completeAnalytic_iff_illFounded_reduces",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration completeAnalytic_iff_illFounded_reduces",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_iff_illFounded_reduces",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_ApproximationCorollaries_completeAnalytic_union_complementablyEmbeds_noAP_iff",
+      "source": "Corollary.CCE.anyE.CA; Cor.Smith",
+      "description": "The complete-analytic isomorphic union conclusion is equivalent to existence of a coded counterexample to AP",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP_iff",
+      "module": "PaperFormalization.ApproximationCorollaries"
+    },
+    {
+      "id": "support_CodingCorollaries_completeAnalytic_union_isometricComplementedClass_noAP_iff",
+      "source": "Introduction, Banach–Mazur coding; Cor.Smith; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "The complete-analytic isometric union conclusion is equivalent to existence of a coded counterexample to AP",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP_iff",
+      "module": "PaperFormalization.CodingCorollaries"
+    },
+    {
+      "id": "support_ApproximationCorollaries_completeCoanalytic_approximationPropertyClass_iff",
+      "source": "Corollary.CCE.anyE.CA; Cor.Smith",
+      "description": "The complete-coanalytic AP conclusion is equivalent to existence of a coded counterexample to AP",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeCoanalytic_approximationPropertyClass_iff",
+      "module": "PaperFormalization.ApproximationCorollaries"
+    },
+    {
+      "id": "support_DescriptiveClasses_completeCoanalytic_iff_wellFounded_reduces",
+      "source": "Introduction, definitions of analytic and coanalytic sets and Borel completeness",
+      "description": "Supporting declaration completeCoanalytic_iff_wellFounded_reduces",
+      "status": "verified",
+      "declaration": "PaperFormalization.completeCoanalytic_iff_wellFounded_reduces",
+      "module": "PaperFormalization.DescriptiveClasses"
+    },
+    {
+      "id": "support_DualCoding_continuous_codedDualPairing_norm",
+      "source": "ThmDualityPairing",
+      "description": "The pairing on each coded space is jointly norm-continuous",
+      "status": "verified",
+      "declaration": "PaperFormalization.continuous_codedDualPairing_norm",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_dist_codedDualBallHomeomorph",
+      "source": "ThmDualityPairing",
+      "description": "The compact code carries the dual norm distance when read in ℓ∞",
+      "status": "verified",
+      "declaration": "PaperFormalization.dist_codedDualBallHomeomorph",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualBallModel_dualEvaluationLinearIsometry",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration dualEvaluationLinearIsometry",
+      "status": "verified",
+      "declaration": "PaperFormalization.dualEvaluationLinearIsometry",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualCoding_dualPairingSet",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration dualPairingSet",
+      "status": "verified",
+      "declaration": "PaperFormalization.dualPairingSet",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_exists_borel_codedDualBall_selectors",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration exists_borel_codedDualBall_selectors",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_borel_codedDualBall_selectors",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_exists_borel_unitBall_selectors",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration exists_borel_unitBall_selectors",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_borel_unitBall_selectors",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_CodingCorollaries_exists_coded_noAP_iff",
+      "source": "Introduction, Banach–Mazur coding; Cor.Smith; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "A separable Banach-space counterexample to AP exists exactly when a coded one exists",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_coded_noAP_iff",
+      "module": "PaperFormalization.CodingCorollaries"
+    },
+    {
+      "id": "support_ApproximationCorollaries_illFounded_reduces_not_approximationProperty",
+      "source": "Corollary.CCE.anyE.CA; Cor.Smith",
+      "description": "Supporting declaration illFounded_reduces_not_approximationProperty",
+      "status": "verified",
+      "declaration": "PaperFormalization.illFounded_reduces_not_approximationProperty",
+      "module": "PaperFormalization.ApproximationCorollaries"
+    },
+    {
+      "id": "support_DualCoding_image_unitBall_codedDualEvaluation",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration image_unitBall_codedDualEvaluation",
+      "status": "verified",
+      "declaration": "PaperFormalization.image_unitBall_codedDualEvaluation",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_EffrosStandard_instBorelSpaceBanachAmbient",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Supporting declaration instBorelSpaceBanachAmbient",
+      "status": "verified",
+      "declaration": "PaperFormalization.instBorelSpaceBanachAmbient",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "support_CompactIntersection_instBorelSpaceNonemptyCompacts_paperFormalization",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Supporting declaration instBorelSpaceNonemptyCompacts_paperFormalization",
+      "status": "verified",
+      "declaration": "PaperFormalization.instBorelSpaceNonemptyCompacts_paperFormalization",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "support_EffrosStandard_instMeasurableSpaceBanachAmbient",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Supporting declaration instMeasurableSpaceBanachAmbient",
+      "status": "verified",
+      "declaration": "PaperFormalization.instMeasurableSpaceBanachAmbient",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "support_CompactIntersection_instMeasurableSpaceCompactsContainingZero",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Supporting declaration instMeasurableSpaceCompactsContainingZero",
+      "status": "verified",
+      "declaration": "PaperFormalization.instMeasurableSpaceCompactsContainingZero",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "support_CompactIntersection_instMeasurableSpaceNonemptyCompacts_paperFormalization",
+      "source": "ThmAPisCoanalytic proof, compact K containing zero and K intersect X",
+      "description": "Supporting declaration instMeasurableSpaceNonemptyCompacts_paperFormalization",
+      "status": "verified",
+      "declaration": "PaperFormalization.instMeasurableSpaceNonemptyCompacts_paperFormalization",
+      "module": "PaperFormalization.CompactIntersection"
+    },
+    {
+      "id": "support_ComplementedAnalytic_interleaveSequences",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Supporting declaration interleaveSequences",
+      "status": "verified",
+      "declaration": "PaperFormalization.interleaveSequences",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "support_ComplementedAnalytic_interleaveSequences_left",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Supporting declaration interleaveSequences_left",
+      "status": "verified",
+      "declaration": "PaperFormalization.interleaveSequences_left",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "support_ComplementedAnalytic_interleaveSequences_right",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Supporting declaration interleaveSequences_right",
+      "status": "verified",
+      "declaration": "PaperFormalization.interleaveSequences_right",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "support_DualBallModel_isHomeomorph_weakStarL1Coordinates",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "The coordinate cube is the weak-star dual unit ball of ℓ₁",
+      "status": "verified",
+      "declaration": "PaperFormalization.isHomeomorph_weakStarL1Coordinates",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualCoding_measurableSet_dualPairingSet",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration measurableSet_dualPairingSet",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurableSet_dualPairingSet",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_measurable_codedDualBall",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration measurable_codedDualBall",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_codedDualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_measurable_codedDualPairing",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration measurable_codedDualPairing",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_codedDualPairing",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_measurable_effros_codedDualBall",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration measurable_effros_codedDualBall",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_effros_codedDualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_EffrosHyperspace_measurable_nonemptyCompacts_of_dense_selectors",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration measurable_nonemptyCompacts_of_dense_selectors",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_nonemptyCompacts_of_dense_selectors",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_measurable_nonemptyCompacts_toCloseds",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration measurable_nonemptyCompacts_toCloseds",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_nonemptyCompacts_toCloseds",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_DualCoding_measurable_unitBallSelector",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration measurable_unitBallSelector",
+      "status": "verified",
+      "declaration": "PaperFormalization.measurable_unitBallSelector",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_BranchGeometry_norm_branchProjection",
+      "source": "Eq.Pbeta; proof of ThmIFnotAP",
+      "description": "The depth-folding branch projection has norm one",
+      "status": "verified",
+      "declaration": "PaperFormalization.norm_branchProjection",
+      "module": "PaperFormalization.BranchGeometry"
+    },
+    {
+      "id": "support_DualCoding_range_codedDualEvaluation",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration range_codedDualEvaluation",
+      "status": "verified",
+      "declaration": "PaperFormalization.range_codedDualEvaluation",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_EffrosHyperspace_standardBorel_of_measurable_leftInverse",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration standardBorel_of_measurable_leftInverse",
+      "status": "verified",
+      "declaration": "PaperFormalization.standardBorel_of_measurable_leftInverse",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_ApproximationCorollaries_union_complementablyEmbeds_noAP",
+      "source": "Corollary.CCE.anyE.CA; Cor.Smith",
+      "description": "The union of isomorphic complemented-copy classes over spaces failing AP equals the complement of AP",
+      "status": "verified",
+      "declaration": "PaperFormalization.union_complementablyEmbeds_noAP",
+      "module": "PaperFormalization.ApproximationCorollaries"
+    },
+    {
+      "id": "support_CodingCorollaries_union_isometricComplementedClass_noAP",
+      "source": "Introduction, Banach–Mazur coding; Cor.Smith; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "The union of isometric complemented-copy classes over spaces failing AP equals the complement of AP",
+      "status": "verified",
+      "declaration": "PaperFormalization.union_isometricComplementedClass_noAP",
+      "module": "PaperFormalization.CodingCorollaries"
+    },
+    {
+      "id": "support_DualCoding_unitBallSelector",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration unitBallSelector",
+      "status": "verified",
+      "declaration": "PaperFormalization.unitBallSelector",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualBallModel_weakStarL1Coordinates",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration weakStarL1Coordinates",
+      "status": "verified",
+      "declaration": "PaperFormalization.weakStarL1Coordinates",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualBallModel_weakStarUnitBall_opNorm_le",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration weakStarUnitBall_opNorm_le",
+      "status": "verified",
+      "declaration": "PaperFormalization.weakStarUnitBall_opNorm_le",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_ApproximationAnalytic_continuous_weakStarUnitBall_eval",
+      "source": "ThmAPisCoanalytic",
+      "description": "Supporting declaration continuous_weakStarUnitBall_eval",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationAnalytic.0.PaperFormalization.continuous_weakStarUnitBall_eval",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "support_ApproximationAnalytic_exists_approx_rankOne",
+      "source": "ThmAPisCoanalytic",
+      "description": "Supporting declaration exists_approx_rankOne",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationAnalytic.0.PaperFormalization.exists_approx_rankOne",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "support_ApproximationAnalytic_exists_uniform_approx_weakStarUnitBall",
+      "source": "ThmAPisCoanalytic",
+      "description": "Supporting declaration exists_uniform_approx_weakStarUnitBall",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationAnalytic.0.PaperFormalization.exists_uniform_approx_weakStarUnitBall",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "weak_star_ball_dense_sequence",
+      "source": "ThmDualityPairing; proof of ThmAPisCoanalytic",
+      "description": "A countable dense sequence in the weak-star unit ball",
+      "status": "verified",
+      "declaration": "PaperFormalization.exists_weakStarUnitBall_denseSeq",
+      "module": "PaperFormalization.CantorEmbedding"
+    },
+    {
+      "id": "support_ApproximationAnalytic_finiteRank_decompose",
+      "source": "ThmAPisCoanalytic",
+      "description": "Supporting declaration finiteRank_decompose",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationAnalytic.0.PaperFormalization.finiteRank_decompose",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "support_ApproximationAnalytic_finiteRank_sum_smulRight",
+      "source": "ThmAPisCoanalytic",
+      "description": "Supporting declaration finiteRank_sum_smulRight",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationAnalytic.0.PaperFormalization.finiteRank_sum_smulRight",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "support_ApproximationAnalytic_weakStarUnitBall_le_norm",
+      "source": "ThmAPisCoanalytic",
+      "description": "Supporting declaration weakStarUnitBall.le_norm",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationAnalytic.0.PaperFormalization.weakStarUnitBall.le_norm",
+      "module": "PaperFormalization.ApproximationAnalytic"
+    },
+    {
+      "id": "support_ApproximationStability_HasApproximationProperty_exists_l1_truncation",
+      "source": "Following Theorem.Map.Phi; Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration HasApproximationProperty.exists_l1_truncation",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationStability.0.PaperFormalization.HasApproximationProperty.exists_l1_truncation",
+      "module": "PaperFormalization.ApproximationStability"
+    },
+    {
+      "id": "support_ApproximationStability_HasApproximationProperty_norm_l1_tail_le",
+      "source": "Following Theorem.Map.Phi; Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration HasApproximationProperty.norm_l1_tail_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ApproximationStability.0.PaperFormalization.HasApproximationProperty.norm_l1_tail_le",
+      "module": "PaperFormalization.ApproximationStability"
+    },
+    {
+      "id": "support_ComplementedAnalytic_complemented_iff_sequenceBound",
+      "source": "Prop.Containing.Complemented.is.Analytic",
+      "description": "Supporting declaration complemented_iff_sequenceBound",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.ComplementedAnalytic.0.PaperFormalization.complemented_iff_sequenceBound",
+      "module": "PaperFormalization.ComplementedAnalytic"
+    },
+    {
+      "id": "support_DualBallModel_dualEvaluation_bound",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration dualEvaluation_bound",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualBallModel.0.PaperFormalization.dualEvaluation_bound",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualBallModel_unitCoordinate",
+      "source": "ThmDualityPairing, weak-star and norm identifications",
+      "description": "Supporting declaration unitCoordinate",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualBallModel.0.PaperFormalization.unitCoordinate",
+      "module": "PaperFormalization.DualBallModel"
+    },
+    {
+      "id": "support_DualCoding_bijective_toCodedDualBall",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration bijective_toCodedDualBall",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.bijective_toCodedDualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_closure_range_typedSelector",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration closure_range_typedSelector",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.closure_range_typedSelector",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_codedDualBallHomeomorph_symm_eval",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration codedDualBallHomeomorph_symm_eval",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.codedDualBallHomeomorph_symm_eval",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_continuous_normalize",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration continuous_normalize",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.continuous_normalize",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_continuous_weakStarCode",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration continuous_weakStarCode",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.continuous_weakStarCode",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_continuous_weakStarCode_restrict",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration continuous_weakStarCode_restrict",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.continuous_weakStarCode_restrict",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_isHomeomorph_toCodedDualBall",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration isHomeomorph_toCodedDualBall",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.isHomeomorph_toCodedDualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_measurable_cubeEval",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration measurable_cubeEval",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.measurable_cubeEval",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_norm_normalize_le",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration norm_normalize_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.norm_normalize_le",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_normalize",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration normalize",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.normalize",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_normalize_eq_of_norm_le",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration normalize_eq_of_norm_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.normalize_eq_of_norm_le",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_toCodedDualBall",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration toCodedDualBall",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.toCodedDualBall",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_typedSelector",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration typedSelector",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.typedSelector",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_typedSelector_norm_le",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration typedSelector_norm_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.typedSelector_norm_le",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_weakStarCode",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration weakStarCode",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.weakStarCode",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_weakStarCode_toLInfinity",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration weakStarCode_toLInfinity",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.weakStarCode_toLInfinity",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_weakStarRestrict",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration weakStarRestrict",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.weakStarRestrict",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_DualCoding_weakStarRestrict_surjective",
+      "source": "ThmDualityPairing",
+      "description": "Supporting declaration weakStarRestrict_surjective",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.DualCoding.0.PaperFormalization.weakStarRestrict_surjective",
+      "module": "PaperFormalization.DualCoding"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_fromCode",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.fromCode",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.EffrosHyperspace.0.PaperFormalization.EffrosClosed.fromCode",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_EffrosClosed_measurable_fromCode",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration EffrosClosed.measurable_fromCode",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.EffrosHyperspace.0.PaperFormalization.EffrosClosed.measurable_fromCode",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosHyperspace_not_nonempty_inter_compl_iff_subset",
+      "source": "Introduction, standard Borel spaces; SectionCoanalytic, Effros hyperspaces",
+      "description": "Supporting declaration not_nonempty_inter_compl_iff_subset",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.EffrosHyperspace.0.PaperFormalization.not_nonempty_inter_compl_iff_subset",
+      "module": "PaperFormalization.EffrosHyperspace"
+    },
+    {
+      "id": "support_EffrosStandard_ClosedSubspaces_coe_spanOfSequence",
+      "source": "Introduction, standard Borel coding of separable Banach spaces",
+      "description": "Supporting declaration ClosedSubspaces.coe_spanOfSequence",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.EffrosStandard.0.PaperFormalization.ClosedSubspaces.coe_spanOfSequence",
+      "module": "PaperFormalization.EffrosStandard"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_CodedPair",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration CodedPair",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.CodedPair",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_SequenceLinearBound_value_le",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration SequenceLinearBound.value_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.SequenceLinearBound.value_le",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_Witness",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration Witness",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.Witness",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_asTyped",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration asTyped",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.asTyped",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_borelAnalytic_operatorRelation",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration borelAnalytic_operatorRelation",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.borelAnalytic_operatorRelation",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_comp_interleave",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration comp_interleave",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.comp_interleave",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_complementedSubspace_iff_retractionBounds",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration complementedSubspace_iff_retractionBounds",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.complementedSubspace_iff_retractionBounds",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_coversSequence",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration coversSequence",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.coversSequence",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_denseRange_asTyped",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration denseRange_asTyped",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.denseRange_asTyped",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_denseRange_of_coversSequence",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration denseRange_of_coversSequence",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.denseRange_of_coversSequence",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_measurableSet_operatorBounds",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration measurableSet_operatorBounds",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.measurableSet_operatorBounds",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_measurableSet_retractionBounds",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration measurableSet_retractionBounds",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.measurableSet_retractionBounds",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_measurableSet_sequence_mem",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration measurableSet_sequence_mem",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.measurableSet_sequence_mem",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_measurable_interleave",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration measurable_interleave",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.measurable_interleave",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_operatorBounds",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration operatorBounds",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.operatorBounds",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_operatorBounds_iff",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration operatorBounds_iff",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.operatorBounds_iff",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_selectors_mem",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration selectors_mem",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.selectors_mem",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_JointComplementedAnalytic_sum_single_coefficient",
+      "source": "Prop.Containing.Complemented.is.Analytic; isometric variants after Corollary.CCE.anyE.CA",
+      "description": "Supporting declaration sum_single_coefficient",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.JointComplementedAnalytic.0.PaperFormalization.sum_single_coefficient",
+      "module": "PaperFormalization.JointComplementedAnalytic"
+    },
+    {
+      "id": "support_OperatorCode_SequenceLinearBound_realCoefficients",
+      "source": "Prop.Containing.Complemented.is.Analytic, finite rational norm tests",
+      "description": "Supporting declaration SequenceLinearBound.realCoefficients",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.OperatorCode.0.PaperFormalization.SequenceLinearBound.realCoefficients",
+      "module": "PaperFormalization.OperatorCode"
+    },
+    {
+      "id": "support_OperatorCode_linearCombination_eq_sum_initial",
+      "source": "Prop.Containing.Complemented.is.Analytic, finite rational norm tests",
+      "description": "Supporting declaration linearCombination_eq_sum_initial",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.OperatorCode.0.PaperFormalization.linearCombination_eq_sum_initial",
+      "module": "PaperFormalization.OperatorCode"
+    },
+    {
+      "id": "support_RadonNikodymProperty_ac_mapVectorMeasure",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration ac_mapVectorMeasure",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.ac_mapVectorMeasure",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_lp_one_density_norm_bound",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration lp_one_density_norm_bound",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.lp_one_density_norm_bound",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_mapVectorMeasure",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration mapVectorMeasure",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.mapVectorMeasure",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_norm_l1_finite_sum",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration norm_l1_finite_sum",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.norm_l1_finite_sum",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_norm_l1_finite_truncation_le",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration norm_l1_finite_truncation_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.norm_l1_finite_truncation_le",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_singleMap",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration singleMap",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.singleMap",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_RadonNikodymProperty_variation_mapVectorMeasure_le",
+      "source": "Following Theorem.Map.Phi",
+      "description": "Supporting declaration variation_mapVectorMeasure_le",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.RadonNikodymProperty.0.PaperFormalization.variation_mapVectorMeasure_le",
+      "module": "PaperFormalization.RadonNikodymProperty"
+    },
+    {
+      "id": "support_SchurProperty_eventually_norm_tail_lt",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration eventually_norm_tail_lt",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.SchurProperty.0.PaperFormalization.eventually_norm_tail_lt",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_exists_norming_block_family",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration exists_norming_block_family",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.SchurProperty.0.PaperFormalization.exists_norming_block_family",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_norm_truncate",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration norm_truncate",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.SchurProperty.0.PaperFormalization.norm_truncate",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_schur_bad_sequence_blocks",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration schur_bad_sequence_blocks",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.SchurProperty.0.PaperFormalization.schur_bad_sequence_blocks",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_SchurProperty_truncate",
+      "source": "Following Theorem.Map.Phi; following CorCCE.notSchur.NotAP",
+      "description": "Supporting declaration truncate",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.SchurProperty.0.PaperFormalization.truncate",
+      "module": "PaperFormalization.SchurProperty"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_accRank_lt_omega_one",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.accRank_lt_omega_one",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.TreeOrder.0.PaperFormalization.NatTree.accRank_lt_omega_one",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_derivative_successor",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.derivative_successor",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.TreeOrder.0.PaperFormalization.NatTree.derivative_successor",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_intersectStages",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.intersectStages",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.TreeOrder.0.PaperFormalization.NatTree.intersectStages",
+      "module": "PaperFormalization.TreeOrder"
+    },
+    {
+      "id": "support_TreeOrder_NatTree_root_mem_prune_iff_rank",
+      "source": "Eq.Order.Tree.proof; definition of the order by transfinite pruning",
+      "description": "Supporting declaration NatTree.root_mem_prune_iff_rank",
+      "status": "verified",
+      "declaration": "_private.PaperFormalization.TreeOrder.0.PaperFormalization.NatTree.root_mem_prune_iff_rank",
+      "module": "PaperFormalization.TreeOrder"
+    }
+  ],
+  "deferred_support_roots": [
+    "PaperFormalization.completeCoanalytic_approximationPropertyClass_iff",
+    "PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP_iff",
+    "PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP_iff",
+    "PaperFormalization.exists_coded_noAP_iff"
+  ]
+}

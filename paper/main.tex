@@ -1,0 +1,586 @@
+ \documentclass[letterpaper]{amsart}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{braket}
+\usepackage{color}
+\usepackage[all]{xy}
+\usepackage{url}
+\usepackage{bbm}
+\usepackage{mathtools}
+ \usepackage[new]{old-arrows}
+ 
+\usepackage{hyperref,cleveref,graphics,mathrsfs}
+
+\numberwithin{equation}{section}
+
+ 
+
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+ 
+
+\theoremstyle{definition}
+\newtheorem*{acknowledgments}{Acknowledgments}
+ \newtheorem{claim}[theorem]{Claim}
+ \newtheorem*{AIusage}{AI usage statement}
+\newtheorem*{leanformalization}{Lean formalization}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+
+
+ 
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+ 
+
+
+\newcommand{\WF}{\mathrm{WF}}
+\newcommand{\IF}{\mathrm{IF}}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\SB}{\mathrm{SB}}
+\newcommand{\AP}{\mathrm{AP}}
+
+ 
+\newcommand{\eps}{\varepsilon}
+
+ 
+
+ 
+ 
+
+\newcommand{\cU}{{\mathcal{U}}}
+\newcommand{\cF}{{\mathcal{F}}}
+\newcommand{\cB}{{\mathcal{B}}}
+ 
+ 
+ 
+
+ 
+
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\supp}{supp}
+ 
+
+ 
+
+\title[Complexity of  complementably containing a given  subspace  ]{On the complexity of complementably  containing a given  subspace}
+
+\author[K.\ Beanland]{Kevin Beanland}
+\address[K. Beanland]{Department of Mathematics, Washington \& Lee University, 204 W. Washington St. Lexington, VA, 24450}
+\email{beanlandk@wlu.edu}
+\urladdr{kbeanland.wordpress.com}
+ 
+
+\author[B.\ M.\ Braga]{Bruno M.\ Braga}
+
+\address[B.\ M.\ Braga]{IMPA, Estrada Dona Castorina 110, 22460-320, Rio de Janeiro, Brazil}
+\email{demendoncabraga@gmail.com}
+\urladdr{https://sites.google.com/site/demendoncabraga/}
+\thanks  {B. M. Braga  was partially supported by FAPERJ, grant E-26/204.317/2025,  by CNPq, grant 303182/2026-1, and by Serrapilheira, grant R-2501-51476.}
+
+ 
+
+  
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We show that if $E$ is a separable Banach space without the approximation property, then the class of all separable Banach spaces which contain $E$ isomorphically as a complemented subspace is complete analytic. This was known before only for infinite dimensional Banach spaces with the bounded approximation property. Moreover, our result applies beyond the approximation property: it can be replaced by  any isomorphically invariant Banach space property which holds for the reals, is stable under $\ell_1$-sums, and passes to complemented subspaces.  As a corollary, we obtain an alternative proof of a recent result of R.\ Smith which says that the class of separable Banach spaces with the approximation property is complete coanalytic. 
+
+The novelty of our methods is the following: if  $\mathcal C$ is the collection of all isomorphically invariant  Banach space properties which are satisfied by the zero vector space, the reals and stable under $\ell_1$-sums, and  $E$ is a separable Banach space, we construct a Borel function on the space of trees of natural numbers which takes well-founded trees to separable  Banach spaces satisfying all properties in $\mathcal C$ and the ill-founded trees to separable Banach spaces containing a complemented copy of $E$. 
+\end{abstract}
+
+
+\section{Introduction}
+
+ This paper concerns descriptive set theoretical properties of separable Banach spaces. All Banach spaces are over the reals. Applications of such methods in Banach spaces can be traced back to the seminal work of Bourgain in which he showed that if a separable Banach space contains isomorphic copies of all separable reflexive spaces, then it must contain isomorphic copies of all separable Banach spaces (see \cite[Theorem 10]{Bourgain1980PAMS}). This was later formalized by Bossard in his PhD thesis (\cite{BossardThesis}), published in \cite{Bossard2002Fund}. Ever since, descriptive set theoretical methods in Banach space theory have become a standard tool in the area. We refer to the handbook survey \cite{ArgyrosGodefroyRosenthal2003Hndbook} and to the monograph 
+ \cite{Dodos2010LectureNotes} for more details. 
+
+Before stating our results, we briefly recall some of the basic terminology in the area. A \emph{standard Borel space} is a set $X$ together with a $\sigma$-algebra $\mathcal  A$ of subsets of $X$ for which there is a Polish topology $\tau$ on $X$ having $\mathcal A$ as its Borel $\sigma$-algebra; where a \emph{Polish topology} is one which is separable and complete with respect to some metric which generates it (we refer the reader to \cite{KechrisBook1995} for a detailed treatment of standard Borel spaces and descriptive set theory). Given a standard Borel space $(X,\mathcal A)$, the elements of $\mathcal A$ are called the \emph{Borel subsets} of $X$. The Borel subsets of a standard Borel space form the ground level of its \emph{projective hierarchy} and, at the first level, we have the \emph{analytic} and \emph{coanalytic} sets: a subset of $X$ is called \emph{analytic} if it is the image under a Borel map of a Borel subset of another standard Borel space, a subset of $X$ is called \emph{coanalytic} if its complement is analytic. In these notes, we will not go higher in the projective hierarchy than this.
+
+Since there exist sets which are analytic but not coanalytic, one way of showing that a subset $A\subseteq X$ is not coanalytic (and, in particular, not Borel), is to show that every analytic subset is the preimage under a Borel map of $A$. Analytic sets  with this property are called \emph{complete analytic}. On the other hand, if $A$ is coanalytic and every coanalytic subset is the preimage under a Borel map of $A$, then $A$ is \emph{complete coanalytic}. In layman's terms, complete analytic and complete coanalytic sets should be seen as the most complex sets within analytic and coanalytic sets, respectively. 
+
+
+ 
+
+As separable Banach spaces form a proper class, in order to study descriptive properties of separable Banach spaces, we   first code this class as a standard Borel space.   By the famous Banach--Mazur theorem, every separable Banach space is linearly isometric to a subspace of the space of continuous functions endowed with the supremum norm, which we denote by $C[0,1]$. We let 
+\[\SB=\{X\subseteq C[0,1]\mid X\text{ is a closed subspace}\}\]
+and endow $\SB$ with the $\sigma$-algebra generated by 
+\[\{X\in \SB\mid X\cap U\neq \emptyset\},\]
+where $U$ ranges over all open subsets of $C[0,1]$. This is known as the  
+\emph{Effros-Borel $\sigma$-algebra} and it makes $\SB$ into a standard Borel space. This coding of separable Banach spaces allows us to compute the complexity of classes of separable Banach spaces. Although this is only \emph{a} coding for the class of separable Banach spaces, it was shown by  Bossard that any ``reasonably defined'' coding gives rise to the same projective hierarchy  (see \cite[Proposition 2.8]{Bossard2002Fund}).
+
+ 
+
+
+
+
+
+
+
+   One of the  results in Bossard's seminal work shows that for any given infinite dimensional separable Banach space $E$, the class of all separable Banach spaces which contain $E$ isomorphically is complete analytic (see  \cite[Corollary 3.3]{Bossard2002Fund}). Moreover, while not explicitly stated in his work, it is immediate from its proof that  if $E$ is infinite dimensional and has a Schauder basis, then the coding in $\SB$ of the separable Banach spaces which contain complementably a copy of $E$, i.e., 
+\[\mathrm{CC}_E=\left\{X\in \SB\mid E\overset{c}\longhookrightarrow X\right\}\]
+ is complete analytic; here the expression $E\overset{c}\longhookrightarrow X$ means that   $E$ is \emph{isomorphic to a complemented subspace of $X$}. Indeed, the fact that this class is analytic is straightforward (see Proposition \ref{Prop.Containing.Complemented.is.Analytic}); so the difficulty lies in showing it is complete analytic. For this part, Bossard's argument shows that,  considering   the standard Borel space of the trees of natural numbers $\mathrm{Tr}$ and  $p\in [1,\infty)$, there is a  Borel map $\varphi\colon \Tr\to \SB$  such that each $\varphi(T)$ is the $\ell_p$-tree sum of $E$ with respect to a fixed  Schauder basis of $E$ and the tree $T$  (we review trees in Section \ref{SectionCompleteCoanalytic}). Letting $\WF$ and $\IF$ denote the space of  \emph{well-founded} and \emph{ill-founded trees} in $\Tr$, respectively, and choosing $p$ appropriately, one can show that     $\varphi(T)$ does not contain $E$ for all $T\in \WF$ while  it contains $E$ complementably if $T\in \IF$. As $\IF$ is complete analytic (\cite[Theorem 27.1]{KechrisBook1995}), so is $\mathrm{CC}_E$.
+
+ This result can easily be pushed to the class of  Banach spaces with the \emph{bounded approximation property}. Recall, a Banach space $E$ has the \emph{approximation property} (abbreviated as \emph{AP}) if   for all $\eps>0$ and all compact $K\subseteq E$ there is a finite rank bounded operator $T\colon E\to E$    such that $\|x-T(x)\|\leq \eps$ for all $x\in K$; if moreover the operator $T$ can be assumed to have norm at most $\lambda$ for some $\lambda\geq 1$ independent of $\eps$ and $K$, then $E$ has the \emph{bounded approximation property} (abbreviated as \emph{BAP}). While having a Schauder basis implies BAP, there are separable Banach spaces with BAP which do not have a Schauder basis (see \cite[Theorem 1.1]{Szarek1987Acta}). However, the same approach as in the previous paragraph can be used to show that $\mathrm{CC}_E$ is complete analytic for all infinite dimensional $E$ with BAP. Indeed, this follows since  a separable  Banach space   with BAP must be complemented in a Banach space with a Schauder basis (see \cite[Remark 4.13]{JohnsonRosenthalZippin1971Israel} or \cite[Theorem 1]{Pelczynski1971Studia}); so the same construction as above can be used for a space with BAP by replacing it with   this larger space with a Schauder basis in which the BAP space is complemented. Outside the realm of the bounded approximation property, it was not known whether $\mathrm{CC}_E$ can be Borel. We stress here that Bossard's technique does not apply in this setting since it is based on summing a given Schauder basis over trees and, for ill-founded trees, it produces a Banach space with this Schauder basis sitting there complementably. \\
+
+ 
+We now describe our main findings.  The next theorem introduces a novel Borel reduction. Its main novelty lies in the non-necessity of a Schauder basis for the Banach  space $E$.
+
+
+
+\begin{theorem}\label{Theorem.Map.Phi}
+Let $\mathcal C$ be the collection of all isomorphically invariant Banach space properties which are stable under $\ell_1$-sums and satisfied by the zero vector space and the reals. For a given separable Banach space $E$, there is a Borel map $\Phi\colon \Tr\to \SB$ such that 
+\begin{enumerate}
+    \item $\Phi(T)$ has all properties in $\mathcal C$ for all $T\in \WF$, and 
+    \item\label{Theorem.Map.Phi.Item2} $E$ is isometric to a $1$-complemented subspace of $\Phi(T)$  for all $T\in \IF$. 
+\end{enumerate}
+\end{theorem}
+
+The collection $\mathcal C$ contains many interesting properties, including the approximation property, the Schur property, and the Radon--Nikodým property.  \\
+
+
+
+
+We shall now present some immediate corollaries of Theorem \ref{Theorem.Map.Phi}. In order to obtain interesting applications, we consider a smaller subcollection of $\mathcal C$. Precisely, we want to apply Theorem \ref{Theorem.Map.Phi}  so that the elements given by the ill-founded trees do not have all of the properties in $\mathcal C$.
+
+ 
+ 
+\begin{corollary}\label{CorCCE.notSchur.NotAP}
+Let $\mathcal {C}_c$ denote the subcollection of $\mathcal C$ consisting of properties that are inherited by complemented subspaces. Let $E$ be a separable Banach space which does not have at least one of the properties in $\mathcal C_c$.  Then $\mathrm{CC}_E$ is complete analytic.
+\end{corollary}
+
+\begin{proof}
+The analyticity of $\mathrm{CC}_E$  is straightforward regardless of the Banach space $E$ and details are provided in  Proposition \ref{Prop.Containing.Complemented.is.Analytic}. For it to be complete analytic,  notice that the map  $\Phi\colon \Tr\to \SB$ satisfies $\Phi^{-1}(\mathrm{CC}_E)=\IF$. Indeed, if $\Phi(T)$ contained a complemented copy of $E$ for some $T\in \WF$, then $E$ would have all properties in $\mathcal C_c$, a contradiction.
+\end{proof}
+
+
+ Corollary \ref{CorCCE.notSchur.NotAP} applies to a very large class of spaces. For instance, it applies to any separable Banach space $E$ without the approximation property or without the Schur property. In order to emphasize to the nonexpert the generality of Corollary \ref{CorCCE.notSchur.NotAP},  recall that a Banach space $E$ has the \emph{Schur property} if every weakly converging sequence in $E$ converges in norm. By Rosenthal's $\ell_1$-theorem (\cite[The Main Theorem]{Rosenthal1974PNAS}),  a Banach space with the Schur property must contain $\ell_1$ \emph{hereditarily} in the sense that all of its infinite dimensional subspaces contain isomorphic copies of $\ell_1$ ---  this makes having the Schur property alone already a rather rare phenomenon. While not directly relevant to our results, it is worth pointing out that  the  Schur property has higher complexity than analytic or coanalytic, see  \cite[Theorem 1.3]{Kurka2018RACSAM}. 
+
+Together with the application of Bossard's method mentioned above, Corollary \ref{CorCCE.notSchur.NotAP} leaves the following open:
+
+\begin{problem}\label{problem.left.open}
+Is $\mathrm{CC}_E$ always complete analytic, regardless of the infinite dimensional space $E\in \SB$? In view of Corollary \ref{CorCCE.notSchur.NotAP} and the discussion preceding Theorem \ref{Theorem.Map.Phi}, we are left to understand $\mathrm{CC}_E$ for separable Banach spaces $E$ which at the same time satisfy all properties in $\mathcal C_c$ (in particular, they have the approximation property, the Schur property, the Radon--Nikodým property, etc.) but which do not have the bounded approximation property.  
+\end{problem}
+
+\begin{remark} \label{Remark}
+The class of spaces for which Problem \ref{problem.left.open} is open seems so restrictive that some readers may think there are no spaces left out. Unfortunately, this is not the case. To see that, we recall a construction of Figiel, Johnson, and Pe{\l}czy\'nski: let $X$ be a subspace of $\ell_1$ without the approximation property (\cite{Szankowski1978Israel}) and $Z$ be the $\ell_1$-sum of a sequence  $(X_n)_n$   of finite dimensional subspaces of $X$ dense in its Banach–Mazur compactum. For each $n\in\N$, there is a finite codimensional subspace $Y_n$ of $Z$ which does not have   BAP with constant $n$  (see \cite[Corollaries 1.11 and 1.13]{FigielJohnsonPelczynski2011Israel}). If $E$ is the $\ell_1$-sum of all $(Y_n)_n$, then it is clear that it fails BAP; otherwise each $Y_n$, being $1$-complemented in $E$, would have BAP with uniform constant. Moreover,  $E$ has all properties in $\mathcal C_c$:  each $Y_n$ is itself isomorphic to an $\ell_1$-sum of finite dimensional spaces. So, as the properties in $\mathcal C_c$ contain the reals and are  stable under $\ell_1$-sums, we conclude that each $Y_n$ satisfies all properties in $\mathcal C_c$. Being an $\ell_1$-sum of $(Y_n)_n$, the same holds true for  $E$.
+\end{remark}
+
+Corollary \ref{CorCCE.notSchur.NotAP} deals with the complexity of containing a single given space complementably. For properties in $\mathcal C_c$ whose codings in $\SB$ are coanalytic such as 
+\[\AP=\left\{X\in\SB \mid X \text{ has the approximation property}\right\},\]
+ we also obtain the following.
+
+
+
+
+\begin{corollary}\label{Corollary.CCE.anyE.CA}
+The subset \[\bigcup_{E\in \SB\setminus \AP} \mathrm{CC}_E=\left\{X\in \SB\mid \exists E\in\SB\setminus \AP,\ E\overset{c}{\longhookrightarrow} X\right\}\]    is complete analytic. 
+\end{corollary}
+
+\begin{proof}
+    The proof is the same as Corollary \ref{CorCCE.notSchur.NotAP} with the extra ingredient that $\SB\setminus \AP$ is analytic  (see Proposition \ref{ThmAPisCoanalytic} below or \cite[Theorem 4.1]{smith2026Studia}).
+\end{proof}
+
+The reader interested in the isometric theory of Banach spaces may wonder whether Corollaries \ref{CorCCE.notSchur.NotAP}
+ and \ref{Corollary.CCE.anyE.CA} have isometric versions. Precisely, instead of considering $\mathrm{CC}_E$, one can look at 
+ \[\mathrm{CC}^{\equiv}_E=\left\{X\in \SB\mid E\text{ is isometric to a complemented subspace of }X\right\}\]
+(here the symbol $\equiv$ alludes to the relation of isometry). As the relation of isometry is also analytic, the proof of  Proposition \ref{Prop.Containing.Complemented.is.Analytic} (almost verbatim) implies that   $\mathrm{CC}^{\equiv}_E$ is also analytic. As Theorem \ref{Theorem.Map.Phi}\eqref{Theorem.Map.Phi.Item2} gives that $\Phi(T)$  contains complementably isometric copies of $E$, both corollaries also hold for $\mathrm{CC}^{\equiv}_E$.
+
+
+Another  immediate consequence of Theorem \ref{Theorem.Map.Phi} is that an analytic subset containing the separable Banach spaces which have all properties in $\mathcal C_c$ must be large enough so that it contains    all separable Banach spaces complementably. Precisely, we have the following:
+
+
+\begin{corollary}\label{Cor.Analytic.Sub.universal}
+Let $\mathbb A\subseteq \SB$ be an analytic subset so that 
+\[\bigcap_{\mathcal P\in \mathcal C_c} \left\{X\in \SB\mid X\text{ has }\mathcal P\right\}\subseteq \mathbb A.\]  Then, for all $E\in \SB$, there is  $X\in \mathbb A$ such that $ E\overset{c}{\longhookrightarrow }X$.
+\end{corollary}
+
+\begin{proof}
+    Let $E\in \SB$ and pick $\Phi\colon \Tr\to \SB$ as in Theorem \ref{Theorem.Map.Phi} for this $E$. By hypothesis  $\WF\subseteq \Phi^{-1}(\mathbb A)$. Therefore, as $\Phi^{-1}(\mathbb A)$ is analytic and $\WF$ is not, there must be $T\in \Phi^{-1}(\mathbb A)\setminus \WF$. So, $\Phi(T)$ is in $\mathbb A$ and, by Theorem \ref{Theorem.Map.Phi}, it contains a complemented copy of $E$.
+\end{proof}
+
+Corollary \ref{Cor.Analytic.Sub.universal} contrasts with an old result of Johnson and Szankowski which says that there is no single separable Banach space containing complemented copies of all separable Banach spaces (\cite[Theorem A]{JohnsonSzankowski1976Studia}).\\
+
+Finally, Theorem \ref{Theorem.Map.Phi} also provides a completely alternative proof of a recent beautiful result of Smith which showed that   $\AP$ is complete coanalytic  (\cite[Theorem 4.1]{smith2026Studia}).
+
+\begin{corollary}\label{Cor.Smith}
+    The coding for the class of separable Banach spaces with the approximation property, $\AP$,
+    is complete coanalytic.
+\end{corollary}
+
+\begin{proof}
+We show that $\AP$ is coanalytic in Proposition \ref{ThmAPisCoanalytic}, see also the discussion right after this proof for more context on this and \cite{smith2026Studia}. As for complete coanalyticity, this is immediate from Theorem \ref{Theorem.Map.Phi} by choosing a Banach space $E$ without the approximation property, which exists by the work of Enflo (see \cite[Theorem 1]{Enflo1973Acta}).   
+\end{proof}
+
+We finish this introduction explaining the difference in our approach to the one of  Smith. The first difference, which is rather mild, is that Smith does not consider the coding $\SB$ for the class of separable Banach spaces but instead he works with a coding, denoted $\mathcal B$, which is based on coding all possible norms that the vector space of finitely supported functions on $\N$ can have. This difference should be seen more as a cosmetic difference than anything else. The place where our proofs actually diverge is Smith's heavy usage of Lipschitz-free spaces in the construction of his Borel reduction. Without getting into the gory details, Smith's reduction consists of a Borel function which, for a given $T\in \Tr$, constructs a separable metric space $M_{\Delta(T)}$ and then assigns it to its Lipschitz-free space $\mathcal F(M_{\Delta(T)})$. As the final spaces in this reduction are Lipschitz-free spaces, one needs either new ideas or to employ significant results in this area to obtain any corollary other than Corollary \ref{Cor.Smith} and Corollary \ref{Corollary.CCE.anyE.CA}. As the reader will see below, the proof of Theorem \ref{Theorem.Map.Phi} is quite direct and natural, avoiding any technicalities of Lipschitz-free spaces and their approximation properties. This explains the difference in our approach to obtain that $\AP$ is \emph{complete} coanalytic. There is also a significant difference in the proof we present here for $\AP$ being coanalytic, but the difference now changes in nature. Smith's proof in this case is elementary and makes no use of any other results; as a consequence, the proof is quite long and technical. Our proof, on the other hand, is very short, but uses already established facts about descriptive set theory of Banach spaces. More precisely, it uses a Borel parametrization of the dual of separable Banach spaces by the second named author obtained in  \cite[Theorem 1.3]{Braga2015AIFourier} --- we recall this in   Theorem \ref{ThmDualityPairing} below.
+ 
+
+ 
+ 
+
+\section{Complexity upper bounds}
+
+This section contains the  upper estimates needed for Corollaries \ref{CorCCE.notSchur.NotAP} and \ref{Cor.Smith}. Precisely, we show that $\mathrm{CC}_E$ is analytic for all $E\in \SB$ and that $\AP$ is coanalytic. The former is completely standard and  the latter  makes use of a Borel parametrization of the duals of separable Banach spaces studied in \cite{Braga2015AIFourier}.
+
+\subsection{Containing a given subspace complementably is analytic}
+We recall some standard notation first: $\N^0=\{\emptyset\}$ and  $\N^{<\infty}=\bigcup_{n=0}^\infty \N^n$. So $\N^{<\infty}$  denotes the set of all finite tuples of elements of  $\N$. We define $\Q^{<\infty}$ analogously.
+
+
+\begin{proposition}\label{Prop.Containing.Complemented.is.Analytic}
+Let $E\in \SB$. Then $\mathrm{CC}_E$ is analytic.
+\end{proposition}
+
+\begin{proof}
+    First recall that 
+    \[\mathrm{Iso}=\left\{(Y,X)\in \SB\times \SB\mid Y\ \text{ is isomorphic to }\ X \right\}\]
+    is analytic (\cite[Section 2.1.1(P7)]{Dodos2010LectureNotes}) and that 
+    \[\mathrm{SubSp}=\left\{(Y,X)\in \SB\times\SB\mid Y\subseteq X\right\}\]
+    is Borel  (\cite[Section 2.1.1(P1)]{Dodos2010LectureNotes}). Let 
+    \[A=\{(Y,X)\in \mathrm{SubSp}\mid Y\ \text{ is complemented in  }\  X\}\] and let $\pi\colon \SB\times \SB\times \SB\to \SB$ be the projection onto the third coordinate. Therefore, since we have  
+    \[\mathrm{CC}_E=\pi\Big((\{E\}\times \SB\times \SB)\cap( \mathrm{Iso}\times \SB)\cap (\SB\times A)\Big),\]
+     we only need to notice that $A$ is analytic. For this, let $(d_n\colon \SB\to C[0,1])_n$ be the Kuratowski--Ryll-Nardzewski selectors, i.e., each $d_n$ is Borel and $(d_n(X))_n$ is dense in $X$ for all $X\in \SB$ (\cite[12.13]{KechrisBook1995}).
+ Then, for $(Y,X)\in \mathrm{SubSp}$, it is immediate that
+\begin{align*}(Y,X)
+ \in & A\ \\
+ \Leftrightarrow\ &\exists (n_i)_i,(m_i)_i\in \N^{<\infty}\cup \N^\N, \exists C>0, \forall (a_i)_{i=1}^k,(b_i)_{i=1}^\ell\in \Q^{<\infty},\\
+ &\{d_{n_i}(Y)\}_{i} \text{ is linearly independent and has dense span in }Y,\\
+  &\{d_{n_i}(Y),d_{m_j}(X)\}_{i,j} \text{ is linearly independent and has dense span in }X,\\
+  &\text{and }\left\|\sum_{i=1}^ka_id_{n_i}(Y)\right\|\leq C\left\|\sum_{i=1}^ka_id_{n_i}(Y)+\sum_{i=1}^\ell b_id_{m_i}(X)\right\|.
+ \end{align*}
+ Here $k$ and $\ell$ range only up to the lengths of $(n_i)_i$ and $(m_i)_i$, respectively, when these sequences are finite. Since the conditions on the right-hand side above are   Borel, this shows $A$ is analytic. 
+\end{proof}
+
+
+
+
+ \subsection{The approximation property is coanalytic}
+  \label{SectionCoanalytic}
+
+
+\begin{proposition}\label{ThmAPisCoanalytic}
+    The standard coding for the class of separable Banach spaces with the approximation property, $\mathrm{AP}$, is coanalytic.
+\end{proposition}
+
+In order to prove Proposition \ref{ThmAPisCoanalytic}, we  make use of a coding for the dual of separable Banach spaces and the dual pairing. For the readers'  convenience, we recall this result below. Given a Banach space $X$, $B_X$ denotes its closed unit ball. Given a Polish space $X$, we consider  
+\[\mathcal F(X)=\{F\subseteq X\mid F\text{ is closed}\}\]
+endowed with the Effros-Borel $\sigma$-algebra, i.e., the  $\sigma$-algebra generated by 
+\[\{F\in \mathcal F(X)\mid F\cap U\neq \emptyset\},\]
+where $U$ varies over all open subsets of $X$. 
+This makes $\mathcal F(X)$ into a  standard Borel space (see \cite[Sections 4.F and 12.C]{KechrisBook1995}). Let also  
+\[\mathcal K(X)=\{K\in \mathcal F(X)\mid K\text{ is compact}\}.\]
+Then, $\mathcal K(X)$ is a Borel subspace of $\mathcal F(X)$ and, therefore, it is also a standard Borel space (see \cite[Sections 4.F and 12.C]{KechrisBook1995} for details). 
+
+In the next theorem, $B_{\ell_\infty}$ is considered endowed with the weak$^*$ topology, which makes it into a   Polish space. The restriction of this topology to a compact subset of $B_{\ell_\infty}$ is also referred to as the weak$^*$ topology of this subset.
+
+
+\begin{theorem}\emph{(\cite[Theorem 1.3 and Lemma 3.2]{Braga2015AIFourier}).}
+ There exists a Borel map $\Theta\colon \SB \to \mathcal K(B_{\ell_\infty})$ such
+that, for each $X \in \SB$, $X^*$ is linearly isometric to $\mathrm{span}\{\Theta(X)\}$ and the restriction of this isometry to $B_{X^*}$ has image $ \Theta(X)$.
+Moreover, setting
+\[\mathbb A = \{(X, x^*, x
+) \in \SB \times B_{\ell_\infty} \times C[0,1] \mid x\in  X,\ x^* \in\Theta(X)\},\]
+there exists a Borel map $\langle \cdot, \cdot\rangle_{(\cdot)}\colon \mathbb A \to \R$ such that, for each $X \in  \SB$,
+\begin{enumerate}
+    \item\label{ThmDualityPairing.Item1} $\langle \cdot, \cdot\rangle_{X}$ is norm continuous,
+\item\label{ThmDualityPairing.Item2} $ x^*\in  \Theta(X)\to \langle x^*, \cdot\rangle_{X}\in B_{X^*} $ is a surjective isometry considering $\Theta(X)$ endowed with the metric inherited by ${\ell_\infty}$, and 
+\item \label{ThmDualityPairing.Item3} $ x^*\in  \Theta(X)\to \langle x^*, \cdot\rangle_{X}\in B_{X^*} $ is a homeomorphism considering   $\Theta(X)$ and  $B_{X^*}$ endowed with their    weak$^*$ topology.
+\end{enumerate}\label{ThmDualityPairing}
+\end{theorem}
+
+\begin{remark}
+Items \eqref{ThmDualityPairing.Item1} and \eqref{ThmDualityPairing.Item2} of Theorem \ref{ThmDualityPairing} are precisely \cite[Theorem 1.3]{Braga2015AIFourier} while item  \eqref{ThmDualityPairing.Item3}   is a consequence of \cite[Lemma 3.2]{Braga2015AIFourier}. 
+\end{remark}
+
+\begin{proof}
+    [Proof of Proposition \ref{ThmAPisCoanalytic}]
+\setlength{\emergencystretch}{2em}%
+Once again we use the Borel selectors given by the Kuratowski--Ryll-Nardzewski Selection Theorem (see \cite[12.13]{KechrisBook1995}). Precisely, fix sequences \[(S_n\colon \mathcal F(C[0,1])\to C[0,1])_{n\in \N}\ \text{ and }\ (V_n\colon\mathcal K( B_{\ell_\infty})\to B_{\ell_\infty})_{n\in \N}\]  of Borel maps such that 
+$(S_n(X))_{n\in\N}$ is dense in $X$, for all nonempty $X\in \mathcal F(C[0,1])$, and $(V_n(K))_{n\in\N}$ is dense in $K$, for all nonempty $K\in \mathcal K(B_{\ell_{\infty}})$. Moreover, let $\Theta\colon \SB\to \mathcal K(B_{\ell_\infty})$ be the map given by Theorem \ref{ThmDualityPairing}. 
+
+Letting $\mathcal K$ denote the elements of  $\mathcal K(C[0,1])$ containing $0$, we have that 
+   \begin{align*}
+\mathrm{AP}=&\bigcap_{\eps\in \Q_{>0}}         \bigcap_{K\in \mathcal K}\bigcup_{k\in\N}\bigcup_{\substack{ n_1,\ldots, n_k\in \N\\ m_1,\ldots, m_k\in \N}} \bigcap_{n\in\N}&\\
+&\left\{X\in \SB\mid \left\|S_n(K\cap X)-\sum_{i=1}^k\langle V_{m_i}(\Theta(X)), S_n(K\cap X)\rangle_{X}S_{n_i}(X)\right\|\leq \eps\right\}.
+    \end{align*}
+While the converse implication above should be  clear, maybe a  couple of words are in order to justify the forward. This follows since if $U\colon X\to X$ is a finite rank operator, then there are $k\in\N$, $x_1,\ldots, x_k\in X$, and $x^*_1,\ldots,x^*_k\in B_{X^*}$ such that $U=\sum_{i=1}^k\langle x^*_i,\cdot\rangle x_i$. As $(S_{n}(X))_n$ is dense in $X$, $U$ can be arbitrarily well approximated by operators of the form $\sum_{i=1}^k\langle x^*_i,\cdot\rangle S_{n_i}(X)$ for an appropriate choice of $n_1,\ldots,n_k$ in $\N$. Moreover, for a given compact $K\subseteq X$, as $(V_n(\Theta(X)))_n$ is dense in $\Theta(X)$ with respect to the weak$^*$ topology, we can also replace $x^*_1,\ldots,x^*_k$ by elements of the form $V_{m_1}(\Theta(X)), \ldots, V_{m_k}(\Theta(X))$ for some $m_1,\ldots, m_k$ in $\N$. 
+
+Finally, since the maps $(S_n)_{n\in\N}$ and $(V_n)_{n\in\N}$ are Borel, the subsets on the right-hand side of the previous displayed equation above are all Borel. Therefore, since the only non-Borel quantifier above is the intersection over all $K\in \mathcal K(C[0,1])$, this shows that $\AP$ is coanalytic.
+\end{proof}
+ 
+
+
+
+
+\section{Our Borel reduction}\label{SectionCompleteCoanalytic}
+
+The goal of this section is to prove Theorem \ref{Theorem.Map.Phi}. We start recalling some basic terminology and notation which will be used below. Throughout, we let $\N=\{1,2, 3,\ldots\}$, $\N_0=\{0\}\cup \N$. Given a set $S$, we let $\ell_1(S)$ denote the Banach space of absolutely summable families $(\lambda_i)_{i\in S}$ of real numbers endowed with the $\ell_1$-norm \[\|(\lambda_i)_i\|=\sum_{i\in S}|\lambda_i|.\] We denote the canonical Schauder basis of $\ell_1(S)$ by $(\delta_{i})_{i\in S}$, i.e., each $\delta_i$ is the $S$-indexed family of real numbers with $1$ in its $i$-th coordinate and $0$ in all others. If $S=\N_0$, we simply write $\ell_1$ for $\ell_1(\N_0)$.  
+
+
+In what follows below, the sets $S$ for which $\ell_1(S)$ is considered will be trees of natural numbers. We quickly recall the necessary terminology regarding these trees now.  Given a nonempty tuple $\bar n=(n_1,\ldots, n_s)\in \N^{<\infty}$, the \emph{length of $\bar n$}, denoted by $|\bar n|$ is $s$; if $\bar n=\emptyset$, the \emph{length of $\bar n$}, still denoted by $|\bar n|$, is $0$. If $\bar n=(n_1,\ldots, n_s),\bar m=(m_1,\ldots, m_k)\in \N^{<\infty}$, we write  $\bar n\preceq \bar m$ if $s\leq k$ and $n_i=m_i$ for all $i\leq s$. A subset  $T\subseteq \N^{<\infty}$ is called a  \emph{tree} if for all $\bar n\in T$, we have that $(n_1,\ldots, n_i)\in T$ for all $0\leq i\leq |\bar n|$, where    $(n_1,\ldots, n_i)=\emptyset$ in case  $i=0$.  The set of all trees is denoted by $\mathrm{Tr}$ and is endowed with the subspace topology inherited from $2^{\N^{<\infty}}$. An infinite tuple $\beta=(n_i)_{i=1}^\infty$ of elements of $\N$ is called a \emph{branch} of $T$ if $\beta_{|i}=(n_1,\ldots, n_i)\in T$ for all $i\in \N$. The set of all branches of $T$ is denoted by $[T]$. A tree $T$  is called \emph{well-founded} if it has no branches, otherwise $T$ is called \emph{ill-founded}. The set of all well-founded trees on $\N$ is denoted by $\WF$ and the set of all ill-founded trees on $\N$ is denoted by $\IF$. The sets $\IF$ and $\WF$ are complete analytic and complete coanalytic, respectively (\cite[Theorem 27.1]{KechrisBook1995}).
+
+
+Given a tree $T$  and a branch $\beta \in [T]$, we let $\ell_1(\beta)$ be the Banach space described above by identifying $\beta$ with the tree $\{\beta_{|i}\mid i\in \N_0\}$. Clearly, the operator $I_\beta\colon \ell_1(\beta)\to \ell_1$ sending each  $\delta_{\beta_{|i}}\in \ell_1(\beta)$, $i\in \N_0$,  to  $\delta_i\in \ell_1$ defines a canonical linear surjective isometry. For each operator  $P\colon \ell_1\to E$, where $E$ is a  Banach space,  and each  branch $\beta=(n_i)_{i=1}^\infty\in [\N^{<\infty}]$, let $P_\beta\colon \ell_1(\beta)\to E$ be the operator  induced by $P$ under the  canonical identification $  I_\beta\colon \ell_1(\beta)\to \ell_1$, i.e., \begin{equation}\label{Eq.Pbeta}
+P_\beta= P\circ I_\beta.\end{equation}
+
+
+For each such $P\colon \ell_1\to E$,   we let 
+\[Z_P=\overline{\mathrm{span} \left\{\ker(P_{\beta})\mid \beta\in [\N^{<\infty}]\right\}}^{\ell_1(\N^{<\infty})}\]
+and, given $T\in \Tr$, we define 
+\[X_{T,P}=\overline{(\ell_1(T)+Z_P)}^{\ell_1(\N^{<\infty})}/Z_P.\]
+In particular, $X_{\emptyset,P}=\{0\}$ and $X_{\N^{<\infty},P}=\ell_1(\N^{<\infty})/Z_P$. Also, for trees $T\subseteq T'$, we have that $X_{T,P}$ is a subspace of $X_{T',P}$. In particular, each $X_{T,P}$ is a subspace of $X_{\N^{<\infty},P}$.
+
+ 
+Recall, as introduced in the introduction, we let $\mathcal C$ denote the collection of all isomorphically invariant Banach space properties which are satisfied by the zero vector space, the reals and are closed under $\ell_1$-sums. 
+
+ 
+\begin{theorem}\label{TheoremWFhasAP}
+   Let $T\in \WF$, $E$ be a Banach space, and  $P\colon \ell_1\to E$ be an operator. Then the Banach space $X_{T,P}$ constructed above  has all properties in  $\mathcal C$. 
+\end{theorem}
+
+The concept of the \emph{order} of a tree will be needed for the proof of Theorem \ref{TheoremWFhasAP}. Recall, given $T\in \WF$, we let
+\[T'=\{\bar n\in T\mid \exists m\in \N \ \text{ with }\ 
+ \bar n^\smallfrown (m)\in T\}.\] We  then use transfinite recursion to define $T^\alpha$, for $\alpha$ a countable ordinal,  as follows: first, let $T^0=T$; for any $\alpha$ smaller than the first uncountable ordinal $\omega_1$, we let
+ \[T^{\alpha+1}=(T^\alpha)'.\]
+If $0<\alpha<\omega_1$ is a limit ordinal, i.e., a nonzero ordinal which is not of the form $\beta+1$ for any ordinal $\beta$, we then let
+\[T^\alpha=\bigcap_{\beta<\alpha}T^\beta.\]
+As $T\in \WF$, $T^\alpha$ is empty for $\alpha<\omega_1$ big enough. The \emph{order of $T$}, denoted by $o(T)$, is the smallest $\alpha<\omega_1$ such that $T^\alpha=\emptyset$.
+
+
+\begin{proof}[Proof of Theorem \ref{TheoremWFhasAP}]
+ The proof proceeds by transfinite induction on the order of trees. First notice that  if $T=\emptyset$, then $X_{T,P}=\{0\}$. Also, if  $o(T)=1$, then $T=\{\emptyset\}$ and    $X_{T,P}$ has dimension at most one. In either case, $X_{T,P}$ has all properties in $\mathcal C$.
+
+Fix a countable ordinal $\alpha\in(1,\omega_1)$ and suppose the assertion holds for all trees of order smaller than $\alpha$, all Banach spaces $E$, and all operators $P\colon \ell_1\to E$. Fix now a tree $T$ with order $\alpha$, an operator  $P\colon \ell_1\to E$, and let us show that $X_{T,P}$ has all properties in  $\mathcal C$. For that, let
+\[M=\{m\in\N\mid (m)\in T\},\]
+and, for each $m\in M$, let
+\[T_m=\{\bar n\in\N^{<\infty}\mid (m)^\smallfrown\bar n\in T\}.\]
+In words, each $T_m$ is a tree which looks like the subset of $T$ happening after $(m)$. As $o(T)>1$, $M\neq\emptyset$, and
+\begin{equation}\label{Eq.Order.Tree.proof}
+ o(T_m)<o(T)\quad\text{ for all }m\in M.
+\end{equation}
+
+Let $V=\mathrm{span}\{P(\delta_0)\}\subseteq E$ and let $Q\colon\ell_1\to E/V$ be the bounded operator given by
+\[Q(\delta_i)=P(\delta_{i+1})+V\quad\text{ for all }i\in\N_0.\]
+By \eqref{Eq.Order.Tree.proof}, the induction hypothesis applies to $Q$ and each $T_m$. That is, each $X_{T_m,Q}$ has all properties in $\mathcal C$.
+
+As $\emptyset\in T$, $X_{\{\emptyset\},P}$ is a subspace of $X_{T,P}$. The result will follow once we show that
+\begin{equation}\label{Claim.left.behind}
+X_{T,P}/X_{\{\emptyset\}, P} \cong
+\left(\bigoplus_{m\in M}X_{T_m,Q}\right)_{\ell_1}.
+\end{equation}
+Indeed,  the induction hypothesis together with \eqref{Claim.left.behind} imply that $X_{T,P}/X_{\{\emptyset\}, P}$   has all properties in $\mathcal C$.  Moreover, as $X_{\{\emptyset\}, P}$ has dimension at most one it also has all properties in $\mathcal C$ and  it is complemented in $X_{T,P}$. So, $X_{T,P}$ is isomorphic to the direct sum $X_{\{\emptyset\}, P}\oplus(X_{T,P}/X_{\{\emptyset\}, P} )$ and, in particular, it also has all properties in $\mathcal C$.
+
+Let us show \eqref{Claim.left.behind} holds. For each $m\in\N$, let $\iota_m$ denote the canonical inclusion of  $\ell_1(\N^{<\infty})$ into the $m$-th coordinate of  $(\bigoplus_{m\in\N}\ell_1(\N^{<\infty}))_{\ell_1}$. Let 
+\[D\colon\ell_1(\N^{<\infty})\longrightarrow
+\left(\bigoplus_{m\in\N}\ell_1(\N^{<\infty})\right)_{\ell_1}\]
+be the surjective operator given by letting 
+\[D(\delta_\emptyset)=0\ \text{ and }\ 
+D(\delta_{(m)^\smallfrown\bar n})=\iota_m(\delta_{\bar n})\]
+for all $m\in\N$ and all $\bar n\in \N^{<\infty}$. So, $\ker(D)=\ell_1(\{\emptyset\})$ and $D$ induces an   isomorphism
+\begin{equation}
+   \label{Eq.D.ind.iso}
+   \ell_1(\N^{<\infty})/\ell_1(\{\emptyset\})\longrightarrow
+\left(\bigoplus_{m\in\N}\ell_1(\N^{<\infty})\right)_{\ell_1}.
+\end{equation}
+
+Notice that 
+\begin{equation}\label{Eq.DimKernels}D(\ker(P_{(m)^\smallfrown\beta}))=\iota_m(\ker(Q_\beta))\end{equation}
+for all $m\in\N$ and all branches $\beta=(n_i)_{i=1}^\infty\in [\N^{<\infty}]$. Indeed, every element in $\ell_1((m)^\smallfrown\beta)$ can be written as
+\[a\delta_\emptyset+
+\sum_{i=0}^\infty b_i\delta_{(m)^\smallfrown\beta_{|i}}\]
+for some  $a\in\R$ and  $(b_i)_{i=0}^\infty\in\ell_1$. By the formula of $P_{(m)^\smallfrown\beta}$, this element belongs to $\ker(P_{(m)^\smallfrown\beta})$  precisely when
+\[aP(\delta_0)+\sum_{i=0}^\infty b_iP(\delta_{i+1})=0.\]
+For a given $(b_i)_{i=0}^\infty \in \ell_1$, such $a$ exists if and only if 
+$\sum_{i=0}^\infty b_iP(\delta_{i+1})\in V$, which is equivalent to  $\sum_{i=0}^\infty b_i\delta_{\beta_{|i}}\in\ker(Q_\beta)$. This proves \eqref{Eq.DimKernels}.
+
+Since $Z_P$ is closed and $\ell_1(\{\emptyset\})$ is finite dimensional, $\ell_1(\{\emptyset\})+Z_P$ is closed. As $D$ is the quotient by $\ell_1(\{\emptyset\})$ followed by an isometry, $D(Z_P)$ is also closed. Therefore, taking closed linear spans, \eqref{Eq.DimKernels} implies that 
+\[D(Z_P)=\left(\bigoplus_{m\in\N}Z_Q\right)_{\ell_1}.\]
+This shows that  the   isomorphism in \eqref{Eq.D.ind.iso} induces an isomorphism
+\begin{equation}\label{Eq.isomorphism.2}\ell_1(\N^{<\infty})/ (\ell_1(\{\emptyset\})+Z_P)
+\cong
+\left(\bigoplus_{m\in\N}\ell_1(\N^{<\infty})\right)_{\ell_1}
+\bigg/
+\left(\bigoplus_{m\in\N}Z_Q\right)_{\ell_1}.\end{equation}
+As the left-hand side and the right-hand side of \eqref{Eq.isomorphism.2} are canonically isomorphic to 
+\begin{align*}
+X_{\N^{<\infty},P}/X_{\{\emptyset\},P}
+  \ \text{ and }\  \left(\bigoplus_{m\in\N}X_{\N^{<\infty},Q}\right)_{\ell_1},
+\end{align*}
+respectively, we obtain an isomorphism 
+\begin{equation}\label{Eq.the.isomorphism.3}
+G\colon     X_{\N^{<\infty},P}/X_{\{\emptyset\},P}\to \left(\bigoplus_{m\in\N}X_{\N^{<\infty},Q}\right)_{\ell_1}.
+\end{equation}
+
+Finally, notice that the isomorphism $G$ in \eqref{Eq.the.isomorphism.3} restricts to an isomorphism witnessing that \eqref{Claim.left.behind} holds. Indeed, for each $m\in \N$ and $\bar n\in \N^{<\infty}$,  $G$ sends the equivalence class of $\delta_{(m)^\smallfrown\bar n}+Z_P$ in  $X_{\N^{<\infty},P}/X_{\{\emptyset\},P}$ to the copy of  $\delta_{\bar n}+Z_Q$ in the $m$-th coordinate of its codomain. Therefore, 
+\[G\left(X_{T,P}/X_{\{\emptyset\}, P}\right)=
+\left(\bigoplus_{m\in M}X_{T_m,Q}\right)_{\ell_1}
+\] and we are done.
+ \end{proof}
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+\begin{theorem}\label{ThmIFnotAP}
+ Let $E$ be a separable Banach space and $P\colon \ell_1\to E$ be a surjective  such that its induced map $\ell_1/\ker(P)\to E$ is an isometry.  Let $T\in \IF$. Then, the Banach space $X_{T,P}$ described above contains an isometric copy of $E$ as a $1$-complemented subspace.
+\end{theorem}
+ 
+
+\begin{proof}
+As $T$ is ill-founded, we can fix a branch $\beta\in [T]$. Define 
+\[Q_\beta\colon \ell_1({\N^{<\infty}})\to \ell_1(\beta)\]
+by letting 
+\[Q_\beta(\delta_{\bar n})=\delta_{\beta_{||\bar n|}} \ \text{ for all }\ \bar n\in \N^{<\infty}.\]
+Clearly, $Q_\beta$ is a bounded operator with norm  $1$. Moreover, it is also immediate that 
+\[Q_\beta(\ker(P_\gamma))\subseteq \ker( P_\beta)\ \text{ for all }\ \gamma\in \left[\N^{<\infty}\right].\]
+Therefore, as $Z_P$ is the closure of the span of all such kernels, we conclude that \[Q_\beta(Z_P)\subseteq \ker(P_\beta).\]
+So,  $Q_\beta$ induces a bounded operator 
+\[\tilde Q_\beta\colon \ell_1(\N^{<\infty})/Z_P\to \ell_1(\beta)/\ker(P_\beta)\]
+with norm at most $1$.
+
+On the other hand, as $\ker(P_\beta)\subseteq Z_P$,  the inclusion  $i\colon \ell_1(\beta)\to \ell_1(T)$ 
+ induces a map 
+$\tilde i\colon \ell_1(\beta)/\ker(P_\beta)\to X_{T,P}$
+such that 
+\[\tilde Q_\beta\circ \tilde i=\mathrm{Id}_{\ell_1(\beta)/\ker(P_\beta)}.\]
+This shows that $\tilde i$ is an isometric embedding and that 
+${\tilde i\circ   \tilde{Q}_{\beta}}_{|X_{T,P}}$ is a projection of norm at most $1$ of $X_{T,P}$ onto $\tilde i(\ell_1(\beta)/\ker(P_\beta))$.  As $E$ is isometric to  $\ell_1(\beta)/\ker(P_\beta)$, we conclude that $E$   is isometric to  a $1$-complemented  subspace of $X_{T,P}$.
+\end{proof}
+
+
+
+We are ready to prove the main result of these notes.
+
+\begin{proof}
+[Proof of Theorem \ref{Theorem.Map.Phi}]  By Theorems \ref{TheoremWFhasAP} and \ref{ThmIFnotAP}, it is enough to show that, given a separable Banach space  $E$ and a quotient map $P\colon \ell_1\to E$, there is a Borel assignment $\varphi\colon \Tr\to \SB$ such that $\varphi(T)$ is isometric to $X_{T,P}$ for all $T\in \Tr$. Although this sort of construction is standard in the specialized literature (cf.\ \cite[Lemma 2.4]{Bossard2002Fund}), for lack of a precise reference, we present the details below. 
+
+
+Pick $W\in \SB$  linearly isometric to $\ell_1(\N^{<\infty})/Z_P$ and let $v\colon \ell_1(\N^{<\infty})/Z_P\to W$ be a surjective linear isometry. Since each $X_{T,P}$ can be canonically seen as a closed subspace of $\ell_1(\N^{<\infty})/Z_P$, we can define   $\varphi\colon \Tr\to \SB$ by letting  \[\varphi(T)=v\left[X_{T,P}\right] \ \text{ for all }\ T\in \Tr.\]
+Clearly, $\varphi(T)$ is isometric to $X_{T,P}$ for all $T\in \Tr$ as desired. 
+
+We are left to notice that $\varphi$ is Borel. For that, let $U\subseteq C[0,1]$ be an open set and let us show that 
+$\{T\in \Tr\mid \varphi(T)\cap U\neq \emptyset\}$
+is Borel. Let 
+\[c_{00}(\N^{<\infty},\Q)=\left\{(\lambda_{\bar n})_{\bar n\in \N^{<\infty}}\in \Q^{\N^{<\infty}}\mid |\{\bar n\in \N^{<\infty}\mid \lambda_{\bar n}\neq 0\}|<\infty\right\}.\]
+Notice that $\varphi(T)\cap U\neq \emptyset$ if and only if there is $(\lambda_{\bar n})_{\bar n\in \N^{<\infty}} \in c_{00}(\N^{<\infty},\Q)$ such that  $v(\sum_{\bar n\in \N^{<\infty}} \lambda_{\bar n}\delta_{\bar n}+Z_P)\in U$ and $\lambda_{\bar n}= 0$ for all $\bar n \not\in T$.   Therefore, letting 
+\[I=\left\{(\lambda_{\bar n})_{\bar n\in \N^{<\infty}}\in c_{00}(\N^{<\infty},\Q)\mid v\left(\sum_{\bar n\in \N^{<\infty}} \lambda_{\bar n}\delta_{\bar n}+Z_P\right)\in U\right\},\]
+we have that 
+\[\{T\in \Tr\mid \varphi(T)\cap U\neq \emptyset\}=\bigcup_{(\lambda_{\bar n})_{\bar n\in \N^{<\infty}}\in I}\bigcap_{\substack{\bar n\in\N^{<\infty}, \\
+\lambda_{\bar n}\neq 0}} \left\{T\in \Tr\mid \bar n\in T\right\}. \]
+As all sets in the right-hand side above are Borel and the indices in the union and intersection are countable, this shows that  the set on the left-hand side above is also Borel as desired.
+\end{proof}
+
+
+
+
+
+ 
+
+
+\begin{acknowledgments}
+    We would like to thank R.\ Smith for useful comments on an earlier version of this draft. 
+\end{acknowledgments} 
+
+
+
+ \begin{AIusage}
+This work started in June of 2024, and the construction of the Borel map   $T\mapsto X_{T,P}$ was done back then with no usage of any generative artificial intelligence. However, we had not been able to finish the argument and, more precisely, we did not have a proof for  \eqref{Claim.left.behind}. The proof for this claim was obtained with the help of GPT-6 Astra. The reference \cite{FigielJohnsonPelczynski2011Israel} in Remark \ref{Remark} was also obtained with GPT-6 Astra.
+\end{AIusage}
+
+%\begin{leanformalization}
+%Maybe I will be brave enough...
+%\begin{center}
+%\url{ }
+%\end{center}
+%\end{leanformalization}
+
+ 
+\begin{thebibliography}{AGR03}\bibitem[AGR03]{ArgyrosGodefroyRosenthal2003Hndbook}
+S.~Argyros, G.~Godefroy, and H.~Rosenthal.
+\newblock Descriptive set theory and {B}anach spaces.
+\newblock In {\em Handbook of the geometry of {B}anach spaces, {V}ol.\ 2},
+pages 1007--1069.
+\newblock North-Holland, Amsterdam, 2003.\bibitem[Bos92]{BossardThesis}
+B.~Bossard.
+\newblock  Théorie descriptive des ensembles en géométrie des espaces de
+Banach. 
+\newblock Thése, Univ. Paris VI, 1994.\bibitem[Bos02]{Bossard2002Fund}
+B.~Bossard.
+\newblock A coding of separable {B}anach spaces. Analytic and coanalytic families
+of {B}anach spaces.
+\newblock {\em Fundamenta Mathematicae}, 172(2):117--152, 2002.
+\bibitem[Bou80]{Bourgain1980PAMS}
+J.~Bourgain.
+\newblock On separable {B}anach spaces, universal for all separable reflexive
+spaces.
+\newblock {\em Proc. Amer. Math. Soc.}, 79(2):241--246, 1980.\bibitem[Bra15]{Braga2015AIFourier}
+B.~M.~Braga.
+\newblock Duality on {B}anach spaces and a {B}orel parametrized version of
+{Z}ippin's theorem.
+\newblock {\em Ann. Inst. Fourier (Grenoble)}, 65(6):2413--2435, 2015.\bibitem[Dod10]{Dodos2010LectureNotes}
+P.~Dodos.
+\newblock {\em Banach spaces and descriptive set theory: selected topics},
+volume 1993 of {\em Lecture Notes in Mathematics}.
+\newblock Springer-Verlag, Berlin, 2010.\bibitem[Enf73]{Enflo1973Acta}
+P.~Enflo.
+\newblock {A counterexample to the approximation problem in Banach spaces}.
+\newblock {\em Acta Mathematica}, 130:309--317, 1973.\bibitem[FJP11]{FigielJohnsonPelczynski2011Israel}
+T.~Figiel, W.~B.~Johnson, and A.~Pe{\l}czy\'nski.
+\newblock Some approximation properties of {B}anach spaces and {B}anach
+lattices.
+\newblock {\em Israel J. Math.}, 183:199--231, 2011.\bibitem[JRZ71]{JohnsonRosenthalZippin1971Israel}
+W.~B.~Johnson, H.~P.~Rosenthal, and M.~Zippin.
+\newblock On bases, finite dimensional decompositions and weaker structures in
+{B}anach spaces.
+\newblock {\em Israel J. Math.}, 9:488--506, 1971.\bibitem[JS76]{JohnsonSzankowski1976Studia}
+W.~B.~Johnson and A.~Szankowski.
+\newblock Complementably universal {B}anach spaces.
+\newblock {\em Studia Math.}, 58(1):91--97, 1976.\bibitem[Kec95]{KechrisBook1995}
+A.~Kechris.
+\newblock {\em Classical descriptive set theory}, volume 156 of {\em Graduate
+Texts in Mathematics}.
+\newblock Springer-Verlag, New York, 1995.\bibitem[Kur18]{Kurka2018RACSAM}
+O.~Kurka.
+\newblock Tsirelson-like spaces and complexity of classes of {B}anach spaces.
+\newblock {\em Rev. R. Acad. Cienc. Exactas F\'is. Nat. Ser. A Mat. RACSAM},
+112(4):1101--1123, 2018.\bibitem[Pe{\l}71]{Pelczynski1971Studia}
+A.~Pe{\l}czy\'nski.
+\newblock Any separable {B}anach space with the bounded approximation property
+is a complemented subspace of a {B}anach space with a basis.
+\newblock {\em Studia Math.}, 40:239--243, 1971.\bibitem[Ros74]{Rosenthal1974PNAS}
+H.~Rosenthal.
+\newblock A characterization of {B}anach spaces containing {$l^{1}$}.
+\newblock {\em Proc. Nat. Acad. Sci. U.S.A.}, 71:2411--2413, 1974.\bibitem[Smi26]{smith2026Studia}
+R.~Smith.
+\newblock Lipschitz-free spaces and {B}ossard's reduction argument. Accepted to appear in Studia Math. \bibitem[Sza78]{Szankowski1978Israel}
+A.~Szankowski.
+\newblock Subspaces without the approximation property.
+\newblock {\em Israel J. Math.}, 30(1-2):123--129, 1978.\bibitem[Sza87]{Szarek1987Acta}
+S.~Szarek.
+\newblock A {B}anach space without a basis which has the bounded approximation
+property.
+\newblock {\em Acta Math.}, 159(1-2):81--98, 1987.\end{thebibliography}
+\end{document}

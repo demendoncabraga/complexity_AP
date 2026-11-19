@@ -1,0 +1,48 @@
+-- Foundations and coding
+import PaperFormalization.Basic
+import PaperFormalization.BanachProperties
+import PaperFormalization.DescriptiveClasses
+import PaperFormalization.TreeTopology
+import PaperFormalization.TreeInduction
+import PaperFormalization.TreeOrder
+import PaperFormalization.TreeCompleteness
+import PaperFormalization.AnalyticPreimage
+import PaperFormalization.BorelAssignment
+import PaperFormalization.EffrosEquality
+import PaperFormalization.EffrosSelectors
+import PaperFormalization.EffrosStandard
+import PaperFormalization.EffrosHyperspace
+
+-- Tree spaces and the main reduction
+import PaperFormalization.TreeReduction
+import PaperFormalization.BranchGeometry
+import PaperFormalization.TreeRoot
+import PaperFormalization.SuccessorOperators
+import PaperFormalization.SuccessorCoordinates
+import PaperFormalization.L1FamilyQuotient
+import PaperFormalization.AmbientSuccessor
+import PaperFormalization.WellFoundedSplit
+import PaperFormalization.WellFoundedReduction
+import PaperFormalization.L1Quotient
+import PaperFormalization.CantorEmbedding
+import PaperFormalization.CantorExtension
+import PaperFormalization.MainReductionAssembly
+import PaperFormalization.MainReduction
+
+-- Banach-space properties and upper bounds
+import PaperFormalization.Approximation
+import PaperFormalization.ApproximationStability
+import PaperFormalization.SchurProperty
+import PaperFormalization.RadonNikodymProperty
+import PaperFormalization.OperatorCode
+import PaperFormalization.ComplementedAnalytic
+import PaperFormalization.JointComplementedAnalytic
+import PaperFormalization.CompactIntersection
+import PaperFormalization.DualBallModel
+import PaperFormalization.DualCoding
+import PaperFormalization.ApproximationAnalytic
+
+-- Corollaries
+import PaperFormalization.AnalyticUniversality
+import PaperFormalization.ApproximationCorollaries
+import PaperFormalization.CodingCorollaries
