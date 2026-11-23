@@ -1,7 +1,7 @@
 {
   "source": "paper/main.tex",
-  "source_sha256": "73c091bde0232ea165bd2cf10890b559ea40022f5f464cb8152441536e67d48c",
-  "inventory_complete": false,
+  "source_sha256": "08eff64ec072d36436566494e5bbb1f78996b286ba251d1f87a8af180543a7c6",
+  "inventory_complete": true,
   "paper_roots": [
     "PaperFormalization.illFounded_isometricOneComplementablyEmbeds",
     "PaperFormalization.wellFounded_treeSpace_has_property",
@@ -37,7 +37,10 @@
     "PaperFormalization.map_splitRootL1_branchKernelSpan",
     "PaperFormalization.map_splitRootL1_rootAugmentedKernel",
     "PaperFormalization.map_splitRootL1_rootCoordinateLine",
-    "PaperFormalization.map_successorL1_branchKernel"
+    "PaperFormalization.map_successorL1_branchKernel",
+    "PaperFormalization.completeCoanalytic_approximationPropertyClass",
+    "PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP",
+    "PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP"
   ],
   "items": [
     {
@@ -180,7 +183,10 @@
       "id": "no_ap_exists",
       "source": "Cor.Smith proof; Enflo1973Acta, Theorem 1",
       "description": "Existence of a separable Banach space without the approximation property",
-      "status": "not_started"
+      "status": "verified",
+      "declaration": "PaperFormalization.enfloNoAP",
+      "module": "PaperFormalization.PaperAssumptions",
+      "external_assumption": true
     },
     {
       "id": "isomorphism_analytic",
@@ -330,7 +336,9 @@
       "id": "cc_union_complete_analytic",
       "source": "Corollary.CCE.anyE.CA",
       "description": "Complete analyticity of the union over spaces without AP",
-      "status": "in_progress"
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP",
+      "module": "PaperFormalization.EnfloConsequences"
     },
     {
       "id": "cc_isometric_variants",
@@ -352,7 +360,9 @@
       "id": "ap_complete_coanalytic",
       "source": "Cor.Smith",
       "description": "Complete coanalyticity of the approximation property",
-      "status": "in_progress"
+      "status": "verified",
+      "declaration": "PaperFormalization.completeCoanalytic_approximationPropertyClass",
+      "module": "PaperFormalization.EnfloConsequences"
     },
     {
       "id": "cc_analytic",
@@ -2166,7 +2176,9 @@
       "id": "cc_isometric_union_complete_analytic",
       "source": "Isometric variants following Corollary.CCE.anyE.CA",
       "description": "Unconditional complete analyticity of the isometric union over spaces failing AP",
-      "status": "in_progress"
+      "status": "verified",
+      "declaration": "PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP",
+      "module": "PaperFormalization.EnfloConsequences"
     },
     {
       "id": "support_DescriptiveClasses_BorelAnalytic",
@@ -3617,10 +3629,5 @@
       "module": "PaperFormalization.TreeOrder"
     }
   ],
-  "deferred_support_roots": [
-    "PaperFormalization.completeCoanalytic_approximationPropertyClass_iff",
-    "PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP_iff",
-    "PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP_iff",
-    "PaperFormalization.exists_coded_noAP_iff"
-  ]
+  "deferred_support_roots": []
 }

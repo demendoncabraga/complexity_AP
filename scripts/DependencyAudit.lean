@@ -39,14 +39,12 @@ run_cmd do
     ``PaperFormalization.map_splitRootL1_branchKernelSpan,
     ``PaperFormalization.map_splitRootL1_rootAugmentedKernel,
     ``PaperFormalization.map_splitRootL1_rootCoordinateLine,
-    ``PaperFormalization.map_successorL1_branchKernel
+    ``PaperFormalization.map_successorL1_branchKernel,
+    ``PaperFormalization.completeCoanalytic_approximationPropertyClass,
+    ``PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP,
+    ``PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP
   ]
-  let deferredSupport : Array Name := #[
-    ``PaperFormalization.completeCoanalytic_approximationPropertyClass_iff,
-    ``PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP_iff,
-    ``PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP_iff,
-    ``PaperFormalization.exists_coded_noAP_iff
-  ]
+  let deferredSupport : Array Name := #[]
   let mut todo := roots ++ deferredSupport
   let mut seen : NameSet := {}
   let mut rows : Array Json := #[]

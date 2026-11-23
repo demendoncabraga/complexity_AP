@@ -16,10 +16,9 @@ standard Borel Effros hyperspaces, and the recalled parametrized
 weak-star dual-ball theorem. AP, the Schur property, and the
 Radon–Nikodým property are proved stable under arbitrary ℓ₁ sums.
 
-Enflo's existence theorem is deferred at the author's request. Lean
-proves that its existence conclusion is exactly what remains to deduce
-complete coanalyticity of AP and complete analyticity of both unions
-over spaces failing AP. The unconditional versions of those three
-claims remain open. The snapshot audit checks the implemented proofs,
-including the four registered declarations supporting the deferred
-conclusions. The terminal audit requires the unconditional claims.
+Enflo's existence theorem is the sole external mathematical axiom, stated in
+`PaperFormalization.PaperAssumptions`. The three AP completeness conclusions
+are Lean theorems that depend explicitly on it. The terminal audit permits
+this named axiom only in those conclusions, checks that they depend on it,
+and reports verification relative to Enflo (1973, Theorem 1). The theorem
+itself is not formalized in Lean.

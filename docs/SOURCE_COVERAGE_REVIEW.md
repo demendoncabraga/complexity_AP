@@ -238,6 +238,9 @@ The two unions over spaces failing AP, whether copies are isomorphic or
 isometric, both equal the complement of AP by the inheritance lemma and
 the identity embedding. The tree reduction gives Borel hardness as soon
 as there is one separable Banach space failing AP. Lean proves that each
-of the three unconditional AP completeness conclusions is equivalent to
-that single existence statement. Enflo's theorem is deferred by the
-author, so these conclusions remain open in the unconditional inventory.
+of the three AP completeness conclusions is equivalent to that existence
+statement. `PaperFormalization.enfloNoAP` is the sole named external axiom,
+citing Enflo (1973, Theorem 1). The final corollaries in
+`PaperFormalization.EnfloConsequences` use it explicitly. The terminal
+audit reports verification relative to this theorem; it does not claim a
+Lean proof of Enflo's construction.

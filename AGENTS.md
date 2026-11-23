@@ -15,9 +15,13 @@ Set `source_sha256` to the reviewed source's SHA-256 digest. Keep
 Write modules under `lean/PaperFormalization/` and import them from
 `lean/PaperFormalization.lean`. Preserve quantifiers, scalar fields, hypotheses,
 and generality. Prove cited dependencies locally or use checked library results.
-Report ambiguities or unavailable cited results to the author. Do not add project
-axioms, external assumptions, or proof placeholders. Only `propext`,
-`Classical.choice`, and `Quot.sound` are permitted foundational axioms.
+Report ambiguities or unavailable cited results to the author.
+The sole authorized external mathematical assumption is Enflo's existence result,
+`PaperFormalization.enfloNoAP`, cited as Enflo (1973), Theorem 1. Keep its
+statement and audit dependency explicit. Do not add other project axioms,
+external assumptions, or proof placeholders. Apart from this named assumption,
+only `propext`, `Classical.choice`, and `Quot.sound` are permitted foundational
+axioms.
 
 Run `python3 scripts/test_audit.py` and `sh scripts/audit.sh` during development.
 After the inventory and proofs are complete, run `sh scripts/audit.sh --terminal`

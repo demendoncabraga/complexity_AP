@@ -62,6 +62,12 @@ def fail(message):
 
 
 
+def authorized_project_axiom(path, line):
+    """The sole project axiom is Enflo's named existence theorem."""
+    return (path.as_posix() == 'lean/PaperFormalization/PaperAssumptions.lean'
+            and re.fullmatch(r'\s*axiom enfloNoAP\s*:', line) is not None)
+
+
 def validate_terminal_scope(coverage, items):
     unfinished = [item['id'] for item in items if item['status'] != 'verified']
     if coverage.get('inventory_complete') is not True or unfinished or not items:
@@ -131,7 +137,8 @@ def main():
         code = lean_code(path.read_text())
         for number, line in enumerate(code.splitlines(), 1):
             if re.search(r'\baxiom\b', line):
-                fail(f'Project axiom declaration: {path.relative_to(root)}:{number}')
+                if not authorized_project_axiom(path.relative_to(root), line):
+                    fail(f'Project axiom declaration: {path.relative_to(root)}:{number}')
             if re.search(r'\b(sorry|admit|sorryAx)\b', line):
                 holes.append(f'{path.relative_to(root)}:{number}')
     if holes:
@@ -168,16 +175,27 @@ def main():
     for match in re.finditer(r"'([^\n]+)'\s+does not depend on any axioms", result.stdout):
         reports[match[1]] = set()
     allowed = {'propext', 'Classical.choice', 'Quot.sound'}
+    enflo = 'PaperFormalization.enfloNoAP'
+    enflo_dependents = {
+        enflo,
+        'PaperFormalization.completeCoanalytic_approximationPropertyClass',
+        'PaperFormalization.completeAnalytic_union_complementablyEmbeds_noAP',
+        'PaperFormalization.completeAnalytic_union_isometricComplementedClass_noAP',
+    }
     for name in names:
         if name not in reports:
             fail('Missing or unrecognized axiom report for ' + name)
         item_statuses = [i['status'] for i in items if i.get('declaration') == name]
-        permitted = allowed if args.snapshot or args.terminal or 'verified' in item_statuses else allowed | {'sorryAx'}
+        permitted = allowed | ({enflo} if name in enflo_dependents else set())
+        if not (args.snapshot or args.terminal or 'verified' in item_statuses):
+            permitted |= {'sorryAx'}
         unexpected = reports[name] - permitted
         if unexpected:
             fail('Unexpected axioms for ' + name + ': ' + ', '.join(sorted(unexpected)))
+        if args.terminal and name in enflo_dependents and enflo not in reports[name]:
+            fail('Expected explicit Enflo dependency for ' + name)
     if args.terminal:
-        print('Terminal mechanical audit passed. Source-to-statement review is also required.')
+        print('Terminal mechanical audit passed relative to Enflo (1973, Theorem 1). Source-to-statement review is also required.')
     elif args.snapshot:
         print('Snapshot audit passed for the implemented formalization.')
     else:

@@ -6,7 +6,7 @@ import tempfile
 from unittest.mock import patch
 from types import SimpleNamespace
 from check_dependencies import check
-from audit import axiom_command, validate_terminal_scope
+from audit import axiom_command, authorized_project_axiom, validate_terminal_scope
 
 
 class AxiomCommandTests(unittest.TestCase):
@@ -19,6 +19,16 @@ class AxiomCommandTests(unittest.TestCase):
         self.assertIn('(Lean.Name.num', command)
         self.assertNotIn('"0"', command)
         self.assertIn('$(Lean.mkIdent name)', command)
+
+
+class ExternalAxiomTests(unittest.TestCase):
+    def test_only_named_enflo_axiom_is_authorized(self):
+        path = Path('lean/PaperFormalization/PaperAssumptions.lean')
+        self.assertTrue(authorized_project_axiom(path, 'axiom enfloNoAP :'))
+        self.assertFalse(authorized_project_axiom(path, 'axiom other :'))
+        self.assertFalse(authorized_project_axiom(Path('lean/PaperFormalization/Other.lean'),
+                                                  'axiom enfloNoAP :'))
+        self.assertFalse(authorized_project_axiom(path, 'axiom enfloNoAP : False'))
 
 
 class TerminalScopeTests(unittest.TestCase):

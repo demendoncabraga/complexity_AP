@@ -29,19 +29,21 @@ empty list is the root, and ℓ₁ coordinates are indexed by depth from zero.
 | --- | --- |
 | [Theorem 1.1](../paper/main.tex#L147) · Main Borel reduction | [`exists_borelReduction`](../lean/PaperFormalization/MainReduction.lean#L17) |
 | [Corollary 1.2](../paper/main.tex#L164) · Complete analyticity of fixed-space complemented containment | [`completeAnalytic_complementedClass`](../lean/PaperFormalization/CodingCorollaries.lean#L29), [`completeAnalytic_complementablyEmbeds`](../lean/PaperFormalization/ComplementedAnalytic.lean#L185) |
-| [Corollary 1.5](../paper/main.tex#L192) · Union over spaces failing AP | [`completeAnalytic_union_complementablyEmbeds_noAP_iff`](../lean/PaperFormalization/ApproximationCorollaries.lean#L68) |
-| [Isometric variants](../paper/main.tex#L199) · Fixed space and union | [`completeAnalytic_isometricComplementedClass`](../lean/PaperFormalization/JointComplementedAnalytic.lean#L348), [`completeAnalytic_union_isometricComplementedClass_noAP_iff`](../lean/PaperFormalization/CodingCorollaries.lean#L51) |
+| [Corollary 1.5](../paper/main.tex#L192) · Union over spaces failing AP | [`completeAnalytic_union_complementablyEmbeds_noAP`](../lean/PaperFormalization/EnfloConsequences.lean#L17) |
+| [Isometric variants](../paper/main.tex#L199) · Fixed space and union | [`completeAnalytic_isometricComplementedClass`](../lean/PaperFormalization/JointComplementedAnalytic.lean#L348), [`completeAnalytic_union_isometricComplementedClass_noAP`](../lean/PaperFormalization/EnfloConsequences.lean#L25) |
 | [Corollary 1.6](../paper/main.tex#L209) · Universality of analytic families | [`analytic_family_contains_complemented_copy`](../lean/PaperFormalization/AnalyticUniversality.lean#L22) |
-| [Corollary 1.7](../paper/main.tex#L222) · Complete coanalyticity of AP | [`completeCoanalytic_approximationPropertyClass_iff`](../lean/PaperFormalization/ApproximationCorollaries.lean#L47) |
+| [Corollary 1.7](../paper/main.tex#L222) · Complete coanalyticity of AP | [`completeCoanalytic_approximationPropertyClass`](../lean/PaperFormalization/EnfloConsequences.lean#L10) |
 | [Proposition 2.1](../paper/main.tex#L245) · Analyticity of fixed-space complemented containment | [`analyticSet_complementablyEmbeds`](../lean/PaperFormalization/ComplementedAnalytic.lean#L101), [`borelAnalytic_isComplementedSubspace`](../lean/PaperFormalization/JointComplementedAnalytic.lean#L421) |
 | [Proposition 2.2](../paper/main.tex#L276) · Coanalyticity of AP | [`borelCoanalytic_approximationPropertyClass`](../lean/PaperFormalization/ApproximationCorollaries.lean#L9), [`analyticSet_not_hasApproximationProperty`](../lean/PaperFormalization/ApproximationAnalytic.lean#L180) |
 | [Theorem 2.3](../paper/main.tex#L292) · Parametrized dual-ball coding | [`borel_parametrized_dualBall`](../lean/PaperFormalization/DualCoding.lean#L384), [`continuous_codedDualPairing_norm`](../lean/PaperFormalization/DualCoding.lean#L344), [`dist_codedDualBallHomeomorph`](../lean/PaperFormalization/DualCoding.lean#L198), [`codedDualBallHomeomorph`](../lean/PaperFormalization/DualCoding.lean#L181) |
 | [Theorem 3.1](../paper/main.tex#L352) · Well-founded tree spaces | [`wellFounded_treeSpace_has_property`](../lean/PaperFormalization/WellFoundedReduction.lean#L11) |
 | [Theorem 3.2](../paper/main.tex#L447) · Ill-founded tree spaces | [`illFounded_isometricOneComplementablyEmbeds`](../lean/PaperFormalization/TreeReduction.lean#L255) |
 
-The equivalences for Corollaries 1.5 and 1.7 and the isometric union isolate
-the same deferred hypothesis, the existence of a separable real Banach
-space without AP. See the [verification scope](VERIFICATION_SCOPE.md).
+The three AP conclusions use the sole external axiom,
+[`enfloNoAP`](../lean/PaperFormalization/PaperAssumptions.lean#L14), citing
+Enflo (1973, Theorem 1). Their proved equivalences with the existence
+statement are in `ApproximationCorollaries` and `CodingCorollaries`.
+See the [verification scope](VERIFICATION_SCOPE.md).
 
 ## Supporting results
 

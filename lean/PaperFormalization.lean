@@ -46,3 +46,9 @@ import PaperFormalization.ApproximationAnalytic
 import PaperFormalization.AnalyticUniversality
 import PaperFormalization.ApproximationCorollaries
 import PaperFormalization.CodingCorollaries
+
+-- Paper-facing review files
+import PaperFormalization.PaperDefinitions
+import PaperFormalization.PaperStatements
+import PaperFormalization.PaperAssumptions
+import PaperFormalization.EnfloConsequences

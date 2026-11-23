@@ -28,9 +28,10 @@
 
 \theoremstyle{definition}
 \newtheorem*{acknowledgments}{Acknowledgments}
+\newtheorem*{leanformalization}{Lean formalization}
  \newtheorem{claim}[theorem]{Claim}
  \newtheorem*{AIusage}{AI usage statement}
-\newtheorem*{leanformalization}{Lean formalization}
+\newtheorem*{leanformalization*}{Lean formalization}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{remark}[theorem]{Remark}
@@ -505,6 +506,19 @@ As all sets in the right-hand side above are Borel and the indices in the union 
 \end{acknowledgments} 
 
 
+\begin{leanformalization}
+Lean formulations of the main theorem and its corollaries,
+together with their supporting proofs, were produced using
+GPT-6.2 Sol and checked in Lean 4 (version 4.33.1), using
+Mathlib and additional source files included in the repository.
+The source files and verification instructions are available at
+\begin{center}
+\url{https://github.com/demendoncabraga/complexity_AP}
+\end{center}
+\noindent
+The only external mathematical result supplied as an explicit
+hypothesis is Enflo's \cite[Theorem 1]{Enflo1973Acta}.
+\end{leanformalization}
 
  \begin{AIusage}
 This work started in June of 2024, and the construction of the Borel map   $T\mapsto X_{T,P}$ was done back then with no usage of any generative artificial intelligence. However, we had not been able to finish the argument and, more precisely, we did not have a proof for  \eqref{Claim.left.behind}. The proof for this claim was obtained with the help of GPT-6 Astra. The reference \cite{FigielJohnsonPelczynski2011Israel} in Remark \ref{Remark} was also obtained with GPT-6 Astra.

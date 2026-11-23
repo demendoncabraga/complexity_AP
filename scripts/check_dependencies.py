@@ -23,6 +23,10 @@ def check(root, *, include_deferred=False):
     if deferred and not include_deferred:
         raise RuntimeError('Deferred support roots require the snapshot audit.')
     declarations, indices = {}, {}
+    review_modules = {
+        'PaperFormalization.PaperStatements',
+        'PaperFormalization.PaperDefinitions',
+    }
     library = root / 'lean/PaperFormalization'
     paths = sorted(library.rglob('*.lean'))
     entry = library.with_suffix('.lean')
@@ -32,6 +36,10 @@ def check(root, *, include_deferred=False):
         module = '.'.join(path.relative_to(root / 'lean').with_suffix('').parts)
         index = root / '.lake/build/lib/lean' / Path(*module.split('.')).with_suffix('.ilean')
         data = json.loads(index.read_text())
+        if module in review_modules:
+            if data['decls']:
+                raise RuntimeError('Review module introduced source declarations: ' + module)
+            continue
         if data['decls'] or path != entry:
             indices[module] = data
         for name, loc in data['decls'].items():
